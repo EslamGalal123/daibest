@@ -1,4 +1,4 @@
-import 'package:diabestapp/Features/profile/Presentation/widget/image_picker.dart';
+import 'package:diabestapp/Features/doctor/presentation/widgets/image_of_doctor.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileDoctorForm extends StatelessWidget {
@@ -10,7 +10,7 @@ class EditProfileDoctorForm extends StatelessWidget {
       children: [
          SizedBox(
                   height: MediaQuery.of(context).size.height * 0.25,
-                  child: const ImagePickervView()),
+                  child: const ImagePickerView()),
       ],
     );
   }

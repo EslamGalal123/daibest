@@ -1,58 +1,124 @@
+// import 'package:fl_chart/fl_chart.dart';
+// import 'package:flutter/material.dart';
+
+// class LineChart extends StatefulWidget {
+//   const LineChart({super.key});
+
+//   @override
+//   State<LineChart> createState() => _LineChartState();
+// }
+
+// class _LineChartState extends State<LineChart> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return AspectRatio(aspectRatio: 1,
+//     child: LineChart(LineChartData(LineChartData:[
+// LineChartBarData(
+//   spots:  [
+//     FlSpot(0, 3),
+//      FlSpot(2.6,2),
+//       FlSpot(4.9,5),
+//        FlSpot(5, 3),
+//         FlSpot(2, 3),
+//          FlSpot(7, 3),
+//   ]
+//   isCurved: true,
+//   dotData: FlDotData(show: true),
+//   color: Colors.blue,
+//   barWidth: 5
+// )
+
+//     ]
+//     maxX: 11,
+//     minX: 0,
+//     maxY: 5,
+//     minY: 2,
+//     backgroundColor: Colors.black,
+//     titlesData: FlTitlesData(
+//       show: true,
+//       bottomTitles: AxisTitles(
+//         axisNameWidget: Text("x axis"),
+//         sideTitles: SideTitles(
+//           showTitles: true,
+//           reservedSize: 30,
+//           interval: 3
+//         )
+//       )
+//     )
+//     gridData: FlGridData(
+//       show: true,
+//       drawHorizontalLine: true,
+      
+//     )
+//     )),);
+//   }
+// }
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
-  List<_ChartData> chartData = [
-    _ChartData(DateTime(2023, 1, 1), 25),
-    _ChartData(DateTime(2023, 2, 1), 28),
-    _ChartData(DateTime(2023, 3, 1), 30),
-    // Add more data points here
-  ];
-
-  List<CartesianSeries<_ChartData, DateTime>> seriesList = [
-    LineSeries<_ChartData, DateTime>(
-      dataSource: chartData,
-      xValueMapper: (_ChartData sales, _) => sales.x,
-      yValueMapper: (_ChartData sales, _) => sales.y,
-    ),
-  ];
-
-
-
-
-class LineChartPage extends StatelessWidget {
-  final List<CartesianSeries<_ChartData, DateTime>> seriesList;
-
-  LineChartPage({required this.seriesList});
+class LineChartWidget extends StatelessWidget {
+  const LineChartWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Line Chart Example'),
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: SfCartesianChart(
-            series: seriesList,
-            primaryXAxis: DateTimeAxis(
-              intervalType: DateTimeIntervalType.months,
-              interval: 1,
+    return AspectRatio(
+      aspectRatio: 1.65,
+      child: LineChart(
+        LineChartData(
+          lineBarsData: [
+            LineChartBarData(
+              spots: [
+                FlSpot(0, 3),
+                FlSpot(2.6, 3),
+                FlSpot(4.9, 5),
+                FlSpot(6.8, 2.5),
+                FlSpot(8, 4),
+                FlSpot(9.5, 3),
+                
+              ],
+              isCurved: true,
+              dotData: FlDotData(show: false),
+              color: Colors.black,
+              barWidth: 2,
             ),
-            primaryYAxis: NumericAxis(
-              title: AxisTitle(text: 'Values'),
-            ),
-            
+          ],
+          // minX: 0,
+          // maxX: 11,
+          // minY: 2,
+          // maxY: 5,
+          backgroundColor: Color(0xFFF9F5F5),
+          titlesData: FlTitlesData(
+            show: false,
+            bottomTitles: AxisTitles(
+              sideTitles: SideTitles(
+              showTitles: false,
+              reservedSize: 30,
+              interval: 10,
+//              getTitlesWidget: (value, titleMeta) {
+//   switch (value.toInt()) {
+//     case 0:
+//       return Text('0');
+//     case 3:
+//       return Text('3');
+//     case 6:
+//       return Text('6');
+//     case 9:
+//       return Text('9');
+//     case 11:
+//       return Text('11');
+//     default:
+//       return Text('');
+//   }
+// },
+            ),)
           ),
+          gridData: FlGridData(
+            show: true,
+            drawHorizontalLine: true,
+          ),
+          borderData: FlBorderData(border: Border.all(width: 0))
         ),
       ),
     );
   }
-}
-
-class _ChartData {
-  final DateTime x;
-  final double y;
-
-  _ChartData(this.x, this.y);
 }

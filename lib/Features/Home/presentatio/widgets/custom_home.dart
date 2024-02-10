@@ -23,11 +23,11 @@ class CustomHome extends StatelessWidget {
             ),
             Expanded(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     AppStrings.diabest,
-                    style: CustomTextStyles.lohit700style32
-                        .copyWith(color: AppColors.black1),
+                    style: TextStyle( letterSpacing: 3,color: AppColors.black1, fontFamily: "poppins",fontSize: 44,fontWeight: FontWeight.bold)
                   ),
                   Text(
                     AppStrings.enjayyourlifewithdiabest,
@@ -55,7 +55,7 @@ class CustomHome extends StatelessWidget {
             subtitlehome: AppStrings.neew,
             leadinghome: Assets.imagesImagePill,
             onpressed: () {
-              
+              customNavigate(context, "/ReminderMedicinsView");
             },),
         CustomListTileInHome(
             titlehome: AppStrings.eating,
@@ -76,7 +76,7 @@ class CustomHome extends StatelessWidget {
             subtitlehome: AppStrings.neew,
             leadinghome: Assets.imagespregnancy,
             onpressed: () {
-              
+              customNavigate(context, "/PregnancyView");
             },)
       ],
     );

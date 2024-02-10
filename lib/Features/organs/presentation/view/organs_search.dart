@@ -1,4 +1,3 @@
-import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Features/organs/presentation/widget/eyes_view.dart';
 import 'package:diabestapp/Features/organs/presentation/widget/foot_view.dart';
 import 'package:diabestapp/Features/organs/presentation/widget/heart_view.dart';
@@ -41,49 +40,59 @@ class _organsViewState extends State<organsView> {
     final filteredItems = getFilteredItems();
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              "Select the affected Organ",
-              style: CustomTextStyles.lohit500style24,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                  hintText: 'Search', prefixIcon: Icon(Icons.search)),
-              onChanged: (value) {
-                setState(() {
-                  searchQuery = value;
-                });
-              },
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Column(
-              children: filteredItems.map((item) {
-                return RadioListTile(
-                  title: Text(
-                    item['title'] as String,
-                    style: CustomTextStyles.lohit500style18,
-                  ),
-                  value: item['value'],
-                  groupValue: organ,
-                  onChanged: (value) {
-                    setState(() {
-                      organ = value as int?;
-                      navigateToPage(item['page'] as Widget);
-                    });
-                  },
-                );
-              }).toList(),
-            ),
-          ],
+        child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 25,
+              ),
+              Text(
+                "Select the affected Organ",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextField(
+                decoration:  InputDecoration(
+                    hintText: 'Search', prefixIcon: Icon(Icons.search),
+                     border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide:const BorderSide(color: Colors.grey, width: 2.0),
+              ),
+                  contentPadding:const EdgeInsets.symmetric(vertical: 10, horizontal: 10), // تحديد المسافة الداخلية
+),
+                onChanged: (value) {
+                  setState(() {
+                    searchQuery = value;
+                  });
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Column(
+                children: filteredItems.map((item) {
+                  return RadioListTile(
+                    title: Text(
+                      item['title'] as String,
+                      style:Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    value: item['value'],
+                    groupValue: organ,
+                    onChanged: (value) {
+                      setState(() {
+                        organ = value as int?;
+                        navigateToPage(item['page'] as Widget);
+                      });
+                    },
+                  );
+                }).toList(),
+              ),
+            ],
+          ),
         ),
       ),
     );

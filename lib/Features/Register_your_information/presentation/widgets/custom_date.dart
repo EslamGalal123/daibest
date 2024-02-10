@@ -17,7 +17,7 @@ class _DateButtonState extends State<DateButton> {
       firstDate: DateTime(1960),
       lastDate: DateTime(2030),
     ))!;
-    if (picked != null && picked != _selectedDate) {
+    if (picked != _selectedDate) {
       setState(() {
         _selectedDate = picked;
       });

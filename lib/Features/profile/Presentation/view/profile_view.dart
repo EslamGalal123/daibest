@@ -13,38 +13,49 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Column(
-            children: [
-              const SizedBox(
-                height: 30,
-              ),
-              SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: const ImagePickervView()),
-              const SizedBox(
-                height: 20,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.1,
-                child: const Text(AppStrings.eslamgalal,
-                    style: CustomTextStyles.lohit500style22),
-              ),
-              SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.2,
-                  child: const CustomProfileForm()),
-              CustomBtnProfile(
-                text: AppStrings.editprofile,
-                onPressed: () {
-                  customNavigate(context, "/editprofile");
-                },
-              ),
-              const Expanded(child: Text("")),
-            ],
-          ),
+        child: Container(
+          // decoration: const BoxDecoration(
+          //     gradient: LinearGradient(
+          //   colors: [Color(0xffa1c4fd), Color(0xffc2e9fb)],
+          // )),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: ListView(
+               children: [
+              Column(
+                children: [
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.3,
+                      child: const ImagePickervView()),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                   Text(AppStrings.eslamgalal,
+                        style:Theme.of(context).textTheme.bodyMedium),
+                  ]),
+             const SizedBox(
+                    height: 20,
+                  ),
+              CustomProfileForm(),
+               const SizedBox(
+                    height: 35,
+                  ),
+               
+                 CustomBtnProfile(
+                  text: AppStrings.editprofile,
+                  onPressed: () {
+                    customNavigate(context, "/editprofile");
+                  },
+                ),
+              
+            
+            
+        ] ),
         ),
-      ),
+      ),),
     );
   }
 }

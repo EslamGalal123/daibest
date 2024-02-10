@@ -209,6 +209,12 @@ class Assets {
   static const String dinner = "Assets/Images/Dinner.jpg";
   static const String badEatingHabitsYouCanBreakfor = "Assets/Images/Bad Eating Habits You Can Break for .jpg";
   static const String onBoarding = "Assets/Images/onbording9.png";
+  static const String remindermedicin = "Assets/Images/remindermedicin.png";
+  static const String start = "Assets/Images/start.png";
+  static const String hand = "Assets/Images/hand.png";
+  static const String elsee = "Assets/Images/else.png";
+  static const String carefulof = "Assets/Images/carefulof.png";
+  static const String specific = "Assets/Images/specific.png";
 
 }
 

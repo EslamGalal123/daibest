@@ -1,7 +1,7 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn_profile.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
-import 'package:diabestapp/Features/profile/Presentation/widget/image_picker.dart';
+import 'package:diabestapp/Features/doctor/presentation/widgets/image_of_doctor.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDoctorForm extends StatelessWidget {
@@ -16,7 +16,7 @@ class ProfileDoctorForm extends StatelessWidget {
       children: [
        SizedBox(
                   height: height * 0.3,
-                  child: const ImagePickervView()),
+                  child: const ImagePickerView()),
         Row(
           children: [
            Text(

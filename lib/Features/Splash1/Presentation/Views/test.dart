@@ -1,55 +1,126 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class DateButton extends StatefulWidget {
-//   @override
-//   _DateButtonState createState() => _DateButtonState();
-// }
-// class _DateButtonState extends State<DateButton> {
-//   late DateTime _selectedDate = DateTime.now();
+class CheckboxWithFields extends StatefulWidget {
+  @override
+  _CheckboxWithFieldsState createState() => _CheckboxWithFieldsState();
+}
 
-//   Future<void> _selectDate(BuildContext context) async {
-//     final DateTime picked = (await showDatePicker(
-//       context: context,
-//       initialDate: _selectedDate,
-//       firstDate: DateTime(2020),
-//       lastDate: DateTime(2030),
-//     ))!;
-//     if (picked != null && picked != _selectedDate) {
-//       setState(() {
-//         _selectedDate = picked;
-//       });
-//     }
-//   }
+// class _CheckboxWithFieldsState extends State<CheckboxWithFields> {
+//   bool isChecked = false;
+//   bool showFields = false;
 
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
 //       appBar: AppBar(
-//         title: Text('زر تسجيل التاريخ'),
+//         title: Text('Checkbox with Fields'),
 //       ),
-//       body: Center(
-//         child:Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: <Widget>[
-//             Container(
-//               width: 200,
-//               height: 50,
-//               decoration: BoxDecoration(
-//                 border: Border.all(color: Colors.blue),
-//                 borderRadius: BorderRadius.circular(8),
+//       body: ListView(
+//         children: [
+//           CheckboxListTile(
+//             title: Text('Checkbox'),
+//             value: isChecked,
+//             onChanged: (bool? value) {
+//               setState(() {
+//                 isChecked = value ?? false;
+//               });
+//               if (isChecked) {
+//                 setState(() {
+//                   showFields = true;
+//                 });
+//               } else {
+//                 setState(() {
+//                   showFields = false;
+//                 });
+//               }
+//             },
+//             controlAffinity: ListTileControlAffinity.leading,
+//           ),
+//           if (showFields) ...[
+//             TextFormField(
+//               decoration: InputDecoration(
+//                 labelText: 'Field 1',
 //               ),
-//               child: ElevatedButton(
-//                 onPressed: () => _selectDate(context),
-//                 child: Text(' ${_selectedDate.day}/${_selectedDate.month}/${_selectedDate.year}'),
-//                 style: ElevatedButton.styleFrom(
-//                   primary: Colors.white,
-//                   onPrimary: Colors.blue,
-//                 ),
+//             ),
+//             TextFormField(
+//               decoration: InputDecoration(
+//                 labelText: 'Field 2',
 //               ),
 //             ),
 //           ],
-//         ),
+//         ],
 //       ),
 //     );
 //   }
 // }
+
+// void main() {
+//   runApp(MaterialApp(
+//     home: CheckboxWithFields(),
+//   ));
+// }
+class _CheckboxWithFieldsState extends State<CheckboxWithFields> {
+  bool isChecked1 = false;
+  bool isChecked2 = false;
+  bool showField1 = false;
+  bool showField2 = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Checkbox with Fields'),
+      ),
+      body: ListView(
+        children: [
+          CheckboxListTile(
+            title: Text('Checkbox 1'),
+            value: isChecked1,
+            onChanged: (bool? value) {
+              setState(() {
+                isChecked1 = value ?? false;
+                if (isChecked1) {
+                  showField1 = true;
+                  showField2 = false;
+                } else {
+                  showField1 = false;
+                }
+              });
+            },
+            controlAffinity: ListTileControlAffinity.leading,
+          ),
+          CheckboxListTile(
+            title: Text('Checkbox 2'),
+            value: isChecked2,
+            onChanged: (bool? value) {
+              setState(() {
+                isChecked2 = value ?? false;
+                if (isChecked2) {
+                  showField1 = false;
+                  showField2 = true;
+                } else {
+                  showField2 = false;
+                }
+              });
+            },
+            controlAffinity: ListTileControlAffinity.leading,
+          ),
+          if (showField1) ...[
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Field 1',
+              ),
+            ),
+          ],
+          if (showField2) ...[
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Field 2',
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}

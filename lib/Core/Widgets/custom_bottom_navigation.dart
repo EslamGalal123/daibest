@@ -39,6 +39,7 @@ backgroundColor:AppColors.white,
             iconSize: 35,
             selectedFontSize: 20,
             unselectedFontSize: 20,
+
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),

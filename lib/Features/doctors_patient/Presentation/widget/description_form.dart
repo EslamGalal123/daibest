@@ -10,11 +10,14 @@ class DescriptionsForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
+
     return Column(
       children: [
         Container(
-          width: MediaQuery.of(context).size.width * 0.44,
-          height: MediaQuery.of(context).size.height * 0.21,
+          width: width * 0.44,
+          height: height * 0.21,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
@@ -24,87 +27,107 @@ class DescriptionsForm extends StatelessWidget {
           ),
           child: ClipOval(
             child: Image.asset(
-              Assets.imagesImageOnBoarding1,
+              Assets.imagesImageProfilDoctor,
               fit: BoxFit.cover,
             ),
           ),
         ),
-        const SizedBox(
-          height: 30,
+        SizedBox(
+          height: height * 0.06,
         ),
         Row(
           children: [
             Text(
               "Name :",
-              style: CustomTextStyles.lohit500style24,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const SizedBox(width: 20,),
+            SizedBox(
+              width: width * 0.03,
+            ),
             Text(
               AppStrings.eslamgalal,
-              style: CustomTextStyles.lohit400style18,
+              style: Theme.of(context).textTheme.bodySmall,
             )
           ],
         ),
-        const SizedBox(
-          height: 30,
+        SizedBox(
+          height: height * 0.02,
         ),
         Row(
           children: [
             Text(
               "Specialization :",
-              style: CustomTextStyles.lohit500style24,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const SizedBox(width: 20,),
+            SizedBox(
+              width: width * 0.03,
+            ),
             Text(
               AppStrings.internist,
-              style: CustomTextStyles.lohit400style18,
+              style: Theme.of(context).textTheme.bodySmall,
             )
           ],
         ),
-        const SizedBox(
-          height: 30,
+        SizedBox(
+          height: height * 0.02,
         ),
         Row(
           children: [
             Text(
               "Phone Number :",
-              style: CustomTextStyles.lohit500style24,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const SizedBox(width: 20,),
+            SizedBox(
+              width: width * 0.03,
+            ),
             Text(
               "01211901201",
-              style: CustomTextStyles.lohit400style18,
+              style: Theme.of(context).textTheme.bodySmall,
             )
           ],
         ),
-        const SizedBox(
-          height: 30,
+        SizedBox(
+          height: height * 0.02,
         ),
         Row(
           children: [
             Text(
               "Clinic Address :",
-              style: CustomTextStyles.lohit500style24,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const SizedBox(width: 20,),
+            SizedBox(
+              width: width * 0.03,
+            ),
             Text(
-             " 23 Talat harb/Cairo",
-              style: CustomTextStyles.lohit400style18,
+              " 23 Talat harb/Cairo",
+              style: Theme.of(context).textTheme.bodySmall,
+              maxLines: 1,
             )
           ],
-        ),const SizedBox(
-          height: 30,
         ),
-      const  Text(AppStrings.contactnow,style: CustomTextStyles.lohit500style24,),
-        const SizedBox(
-          height: 10,
+        SizedBox(
+          height: height * 0.05,
         ),
-         Row(
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              AppStrings.contactnow,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+          ],
+        ),
+         SizedBox(
+          height: height*0.02,
+        ),
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             customSocialIcons(image: Assets.imagesImageFacebook),
-            const SizedBox(width: 10,),
-           customSocialIcons(image: Assets.imageswhatsapp),
+             SizedBox(
+              width: width*0.04,
+            ),
+            customSocialIcons(image: Assets.imageswhatsapp),
           ],
         ),
       ],

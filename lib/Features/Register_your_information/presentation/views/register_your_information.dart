@@ -1,8 +1,6 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
-import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn.dart';
-import 'package:diabestapp/Core/Widgets/custom_info_for_patient.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_date.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_form_info_page1.dart';

@@ -1,7 +1,6 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
-import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_date.dart';
 import 'package:flutter/material.dart';
 
 class CustomInfoForPatient extends StatefulWidget {
@@ -59,25 +58,11 @@ class _CustomInfoForPatientState extends State<CustomInfoForPatient> {
         Row(
           children: [
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-             const     Text(
-                    AppStrings.date,
-                    style: CustomTextStyles.lohit500style20
-                  
-                  ),
-                
-                ],
-              ),
-            ),
-            const SizedBox(width: 16.0),
-            Expanded(
               child: Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                   const  Text(
+                     Text(
                       AppStrings.maritalStatus,
                       style:CustomTextStyles.lohit500style20,
                           
@@ -97,7 +82,9 @@ class _CustomInfoForPatientState extends State<CustomInfoForPatient> {
                       ].map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
-                          child: Text(value),
+                          child: Text(value,
+                          style: Theme.of(context).textTheme.bodySmall),
+                          
                         );
                       }).toList(),
                     ),

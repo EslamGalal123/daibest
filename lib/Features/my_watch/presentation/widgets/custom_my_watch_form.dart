@@ -15,16 +15,16 @@ class CustomMyWatchForm extends StatelessWidget {
           children: [
             Image.asset(
               Assets.imagesLogo2,
-              width: MediaQuery.of(context).size.width * 0.40,
+              width: MediaQuery.of(context).size.width * 0.35,
               height: MediaQuery.of(context).size.height * 0.2,
             ),
             Expanded(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     AppStrings.diabest,
-                    style: CustomTextStyles.lohit700style32
-                        .copyWith(color: AppColors.black1),
+                    style:TextStyle( letterSpacing: 3,color: AppColors.black1, fontFamily: "poppins",fontSize: 44,fontWeight: FontWeight.bold)
                   ),
                   Text(
                     AppStrings.enjayyourlifewithdiabest,
@@ -34,7 +34,8 @@ class CustomMyWatchForm extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                       letterSpacing: 1,
                     ),
-                  )
+                  ),
+                 
                 ],
               ),
             )
@@ -45,14 +46,19 @@ class CustomMyWatchForm extends StatelessWidget {
         ),
         Row(
           children: [
-         const   Text(
-              "Blood Suger Type :",
+            const Text(
+              "Blood Suger Type :      ",
               style: CustomTextStyles.lohit500style20,
             ),
-            Text(
-              ' Type 1',
-              style: CustomTextStyles.lohit400style18,
-            )
+            // Text(
+            //   ' ------',
+            //   style: CustomTextStyles.lohit400style18,
+            // )
+            Container(
+  width: 80,
+  height: 25,
+  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+)
           ],
         ),
         const SizedBox(
@@ -60,14 +66,15 @@ class CustomMyWatchForm extends StatelessWidget {
         ),
         Row(
           children: [
-          const  Text(
-              "Dia Best Reading :",
+            const Text(
+              "Dia Best Reading :       ",
               style: CustomTextStyles.lohit500style20,
             ),
-            Text(
-              ' 105',
-              style: CustomTextStyles.lohit400style18,
-            )
+           Container(
+  width: 80,
+  height: 25,
+  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+)
           ],
         ),
         const SizedBox(
@@ -75,20 +82,21 @@ class CustomMyWatchForm extends StatelessWidget {
         ),
         Row(
           children: [
-          const  Text(
-              "Classificatio Suger :",
+            const Text(
+              "Classification Suger :  ",
               style: CustomTextStyles.lohit500style20,
             ),
-            Text(
-              ' High',
-              style: CustomTextStyles.lohit400style18,
-            )
+            Container(
+  width: 80,
+  height: 25,
+  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+)
           ],
         ),
         const SizedBox(
           height: 10,
         ),
-       const Row(
+        const Row(
           children: [
             Text(
               "Medical Test",
@@ -106,14 +114,15 @@ class CustomMyWatchForm extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-             const         Text(
-                        "FBC :",
+                      const Text(
+                        "RBS :  ",
                         style: CustomTextStyles.lohit500style20,
                       ),
-                      Text(
-                        ' 105',
-                        style: CustomTextStyles.lohit400style18,
-                      )
+                     Container(
+  width: 80,
+  height: 25,
+  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+)
                     ],
                   ),
                   const SizedBox(
@@ -121,57 +130,26 @@ class CustomMyWatchForm extends StatelessWidget {
                   ),
                   Row(
                     children: [
-               const       Text(
-                        "HCV :",
+                      const Text(
+                        "HbA1c :  ",
                         style: CustomTextStyles.lohit500style20,
                       ),
-                      Text(
-                        ' 112',
-                        style: CustomTextStyles.lohit400style18,
-                      )
+                     Container(
+  width: 80,
+  height: 25,
+  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+)
                     ],
                   ),
                 ],
               ),
             ),
-            Expanded(
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                    const  Text(
-                        "FBC :",
-                        style: CustomTextStyles.lohit500style20,
-                      ),
-                      Text(
-                        ' 105',
-                        style: CustomTextStyles.lohit400style18,
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    children: [
-                   const   Text(
-                        "HCV :",
-                        style: CustomTextStyles.lohit500style20,
-                      ),
-                      Text(
-                        ' 112',
-                        style: CustomTextStyles.lohit400style18,
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            )
+          
           ],
         ),
-         const SizedBox(
-                    height: 15,
-                  ),
+        const SizedBox(
+          height: 15,
+        ),
       ],
     );
   }

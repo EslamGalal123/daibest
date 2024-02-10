@@ -44,6 +44,18 @@ abstract class CustomTextStyles {
     color: AppColors.deebGrey,
     fontFamily: "Lohit-Devanagari",
   );
+  static final lohit400style22 = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w400,
+    color: AppColors.deebGrey,
+    fontFamily: "Lohit-Devanagari",
+  );
+  static final lohit500style24deed = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: AppColors.deebGrey,
+    fontFamily: "Lohit-Devanagari",
+  );
   static const lohit700style32 = TextStyle(
     fontSize: 42,
     fontWeight: FontWeight.bold,

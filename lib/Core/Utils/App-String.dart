@@ -77,7 +77,7 @@ changepassword="Change Password",
 cardiologist="Cardiologist",
 dermatology="Dermatology",
 hepatologist="Hepatologist",
-contactnow="Contact Now",
+contactnow="Contact Now :",
 diabest="DIABEST",
 enjayyourlifewithdiabest="ENJOY YOUR LIFE WITH DIABEST",
 

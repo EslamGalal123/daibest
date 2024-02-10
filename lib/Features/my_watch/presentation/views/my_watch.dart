@@ -10,7 +10,7 @@ class MyWatchView extends StatelessWidget {
     return const Scaffold(
       body: SafeArea(
         child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 7.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: CustomScrollView(
                   physics:  BouncingScrollPhysics(),
                   slivers: [

@@ -9,16 +9,21 @@ class DescriptionsOfDoctor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-        title:           Text(AppStrings.doctor,style: CustomTextStyles.lohit500style24,),
-elevation: 0,
+      appBar: AppBar(
+        title: const Text(
+          AppStrings.doctor,
+          style: CustomTextStyles.lohit500style24,
+        ),
+        elevation: 0,
       ),
       body: SafeArea(
         child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 7.0),
-          child: ListView(children:const [
-             SizedBox(height: 20,),
-          DescriptionsForm(),
+          padding: const EdgeInsets.symmetric(horizontal: 13.0),
+          child: ListView(children: const [
+            SizedBox(
+              height: 20,
+            ),
+            DescriptionsForm(),
           ]),
         ),
       ),

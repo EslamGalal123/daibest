@@ -1,5 +1,4 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
-import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Widgets/custom_info_for_patient.dart';
 import 'package:diabestapp/Core/Widgets/custom_text_field.dart';
 import 'package:diabestapp/Features/profile/Functions/edit_profile.dart';
@@ -15,13 +14,12 @@ TextEditingController name = new TextEditingController();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(AppStrings.name,style: CustomTextStyles.lohit500style22,),
         CustomTextFormField(
           mycontroller: name,
           labelText: AppStrings.name),
        const CustomInfoForPatient(),
         const SizedBox(
-          height: 20,
+          height: 30,
         ),
         Row(
           children: [
@@ -39,7 +37,7 @@ TextEditingController name = new TextEditingController();
                 ),
                 child: const Text(
                   'Save Profile',
-                  style: TextStyle(fontSize: 18.0,color: Colors.white),
+                  style: TextStyle(fontSize: 19.0,color: Colors.white, fontFamily:"poppins",fontWeight: FontWeight.w500),
                 ),
               ),
             ),

@@ -18,14 +18,19 @@ VoidCallback onpressed;
             margin: const EdgeInsets.all(10),
             height: MediaQuery.of(context).size.height*0.11,
             decoration: ShapeDecoration(
-              color: AppColors.vanillalatte,
+              color: Color(0xFFF9F5F5),
               shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20),
               ),
             ),
         child: ListTile(
           title: Text(titlehome, style: CustomTextStyles.lohit500style22.copyWith(fontSize: MediaQuery.of(context).devicePixelRatio*8.5),),
-          subtitle: Text(subtitlehome,style:CustomTextStyles.lohit300style16 ),
+          subtitle: Row(
+            children: [
+              Icon(Icons.star,size:15,color:Colors.blue,),
+              Text(subtitlehome,style:CustomTextStyles.lohit300style16 ),
+            ],
+          ),
           leading: Image.asset(leadinghome),
           
         ),

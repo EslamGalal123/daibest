@@ -42,7 +42,7 @@ class Main extends StatelessWidget {
   ),
  bodyMedium: TextStyle(
     fontSize: fontSize*8,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   fontFamily: "poppins",
   color: AppColors.black1
   ),

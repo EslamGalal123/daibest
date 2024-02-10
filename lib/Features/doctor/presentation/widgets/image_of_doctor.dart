@@ -4,14 +4,14 @@ import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-class ImagePickervView extends StatefulWidget {
-  const ImagePickervView({Key? key}) : super(key: key);
+class ImagePickerView extends StatefulWidget {
+  const ImagePickerView({Key? key}) : super(key: key);
 
   @override
-  State<ImagePickervView> createState() => _HomeScreenState();
+  State<ImagePickerView> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<ImagePickervView> {
+class _HomeScreenState extends State<ImagePickerView> {
 
  File? selectImage;
  bool isFile=false;
@@ -20,12 +20,8 @@ class _HomeScreenState extends State<ImagePickervView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:Container(
-          // decoration: const BoxDecoration(
-          //     gradient: LinearGradient(
-          //   colors: [Color(0xffa1c4fd), Color(0xffc2e9fb)],
-          // )),
-          child: Center(
+        body:
+          Center(
             child: Stack(
               alignment: Alignment.topCenter,
                   children: [
@@ -66,7 +62,7 @@ class _HomeScreenState extends State<ImagePickervView> {
                  )]),
           ),
         ) 
-            );}
+            ;}
            
 
   

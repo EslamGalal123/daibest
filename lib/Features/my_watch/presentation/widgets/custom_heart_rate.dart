@@ -10,21 +10,29 @@ class CustomHearttRate extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LineChartPage(seriesList: [],)), // استبدل LineChartPage() بالصفحة التي تحتوي على الرسم البياني
-                );
-              },
-              child: Text('Open Chart Page'),
-            ),     const   SizedBox(height: 10,),
-            const    Text("Heat-Reat",style: CustomTextStyles.lohit500style22,),
+// ElevatedButton(
+//               onPressed: () {
+//                 Navigator.push(
+//                   context,
+//                   MaterialPageRoute(builder: (context) => LineChartPage(seriesList: [],)), // استبدل LineChartPage() بالصفحة التي تحتوي على الرسم البياني
+//                 );
+//               },
+//               child:const Text('Open Chart Page'),
+            // ),  
+              const   SizedBox(height: 10,),
+            
+            const    Text("Pules-Rate",style: CustomTextStyles.lohit500style22,),
+            const   SizedBox(height: 10,),
+            LineChartWidget(),
                 Row(
                   children: [
-               const     Text("Heart Beats :",style: CustomTextStyles.lohit500style20,),
-                              Text(' 80/120',style: CustomTextStyles.lohit400style18,)
-
+               const     Text("Heart Beats :  ",style: CustomTextStyles.lohit500style20,),
+              //  SizedBox(width: ,)
+Container(
+  width: 80,
+  height: 25,
+  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+)
                   ],
                 ),
 

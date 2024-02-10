@@ -24,13 +24,15 @@ import 'package:diabestapp/Features/doctor/presentation/views/edit_profile.dart'
 import 'package:diabestapp/Features/doctor/presentation/views/profile_doctor.dart';
 import 'package:diabestapp/Features/doctors_patient/Presentation/view/description_of_doctor.dart';
 import 'package:diabestapp/Features/organs/presentation/view/organs_search.dart';
+import 'package:diabestapp/Features/pregnancy/presentation/view/pregnancy_view.dart';
 import 'package:diabestapp/Features/profile/Presentation/view/edit_profile_view.dart';
+import 'package:diabestapp/Features/reminder_medicins/presentation/view/reminder_medicin.dart';
 import 'package:diabestapp/Features/sports/presention/view/sports_view.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router =GoRouter(routes: [
   GoRoute(path:'/',
-  builder: (context,state)=> OnBoardingView() ,
+  builder: (context,state)=>Splash2View() ,
   ),
   GoRoute(path:'/Splash2',
   builder: (context,state)=>const Splash2View() ,
@@ -97,5 +99,11 @@ final GoRouter router =GoRouter(routes: [
   ),
   GoRoute(path:"/CreateNewPassword",
   builder: (context,state)=> CreateNewPassword() ,
+  ),
+  GoRoute(path:"/ReminderMedicinsView",
+  builder: (context,state)=>const ReminderMedicinsView() ,
+  ),
+  GoRoute(path:"/PregnancyView",
+  builder: (context,state)=>const PregnancyView() ,
   ),
   ]);
