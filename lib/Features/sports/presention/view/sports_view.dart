@@ -1,4 +1,6 @@
+import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
+import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutPlanScreen extends StatelessWidget {
@@ -6,7 +8,7 @@ class WorkoutPlanScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text('Workout Plan'),
+        title:const Text('Workout Plan',style: CustomTextStyles.lohit500style20,),
       ),
       body: ListView(
         children: [
@@ -17,11 +19,11 @@ class WorkoutPlanScreen extends StatelessWidget {
               style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             ),
           ),
-        const  CardItem(imagePath: "Assets/Images/Hiit.jpg", title: 'Hllt'),
-         const CardItem(imagePath: "Assets/Images/yoga.jpg", title: 'Yoga'),
-         const CardItem(imagePath: "Assets/Images/pilates.jpg", title: 'Pilates'),
-         const CardItem(imagePath: "Assets/Images/bands.jpg", title: 'BANDS'),
-         const CardItem(imagePath: "Assets/Images/meditation.jpg", title: 'Meditation'),
+        const  CardItem(imagePath: Assets.hitt, title: 'Hllt'),
+         const CardItem(imagePath: Assets.yoga, title: 'Yoga'),
+         const CardItem(imagePath: Assets.pilates, title: 'Pilates'),
+         const CardItem(imagePath: Assets.bands, title: 'BANDS'),
+         const CardItem(imagePath: Assets.meditation, title: 'Meditation'),
           AfterCardsContent(),
         ],
       ),
@@ -77,46 +79,40 @@ class AfterCardsContent extends StatelessWidget {
             style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
           ),
         ), 
-        Row(
-          children: [
-            GestureDetector(
-              onTap: () {
-                // Handle image tap, navigate to new page
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => DetailScreen()),
-                );
-              },
-              child: Image.asset(
-                "Assets/Images/Football.jpg",
-                height: 60,
-                fit: BoxFit.cover,
-              ),
-            ),
-            const SizedBox(width: 15,),
-            Text("Football",style: CustomTextStyles.lohit500style18,),
-          ],
+        ListTile(
+          title: Text("Walking"),
+          leading: Image.asset("Assets/Images/walking.png"),
+          trailing:Image.asset("Assets/Images/right.png"), 
+          onTap: () {
+             Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DetailScreen()),
+            );
+          },
         ),
-        const SizedBox(height: 15,),
-        Row(
-          children: [
-            GestureDetector(
-              onTap: () {
-                // Handle image tap, navigate to new page
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => DetailScreen()),
-                );
-              },
-              child: Image.asset(
-                "Assets/Images/basketball2.jpg",
-                height: 60,
-                fit: BoxFit.cover,
-              ),
-            ),
-            const SizedBox(width: 15,),
-            Text("Basketball",style: CustomTextStyles.lohit500style18,),
-          ],
+
+        ListTile(
+          title: Text("Running"),
+          leading: Image.asset("Assets/Images/running.png"),
+          trailing:Image.asset("Assets/Images/right.png"), 
+          onTap: () {
+             Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DetailScreen()),
+            );
+          },
+        ),
+
+        ListTile(
+          title: Text("Biking"),
+          leading: Image.asset("Assets/Images/biking.png"),
+          trailing:Image.asset("Assets/Images/right.png"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DetailScreen()),
+            );
+          }, 
         ),
          ],
     );

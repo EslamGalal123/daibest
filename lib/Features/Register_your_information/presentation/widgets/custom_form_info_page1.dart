@@ -1,3 +1,4 @@
+import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
@@ -40,10 +41,11 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                     gender = val;
                   });
                 }),
-            const Icon(
-              Icons.man,
-              size: 50,
-            ),
+            // const Icon(
+            //   Icons.man,
+            //   size: 50,
+            // ),
+            Image.asset(Assets.imagesImageOpenmojiMan),
             const SizedBox(
               width: 80,
             ),
@@ -55,10 +57,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                     gender = val;
                   });
                 }),
-            const Icon(
-              Icons.woman_outlined,
-              size: 50,
-            ),
+             Image.asset(Assets.imagesImageOpenmojiWoman)
           ],
         ),
      
@@ -339,7 +338,8 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
 children: [
   Row(
           children: [
-            Icon(Icons.woman_2_outlined,size: 40,color: AppColors.black2,),
+            // Icon(Icons.woman_2_outlined,size: 40,color: AppColors.black2,),
+            Image.asset(Assets.imagesImageOpenmojiWoman),
             Text(AppStrings.forfemale,style: CustomTextStyles.lohit500style24.copyWith(color: AppColors.black2),)
           ],
         ),

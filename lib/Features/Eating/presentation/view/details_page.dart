@@ -1,3 +1,4 @@
+import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPageView extends StatelessWidget {
@@ -7,7 +8,7 @@ class DetailsPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
-        title: Text(title),
+        title: Text(title,style: CustomTextStyles.lohit500style20,),
       ),
       body: Center(
         child: Text('Details for $title'),

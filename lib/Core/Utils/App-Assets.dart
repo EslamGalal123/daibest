@@ -203,7 +203,7 @@ class Assets {
   static const String imagesNotoV1ClappingHands = "Assets/Images/noto-v1_clapping-hands.png";
   static const String breakfast = "Assets/Images/How to Eat Healthy and Avoid Fad Diets.jpg";
   static const String howtoEatHealthyandAvoidFadDiets = "Assets/Images/plan.png";
-  static const String healthyMovieSnacks = "Assets/Images/Healthy Movie Snacks.jpg";
+  static const String healthyMovieSnacks = "Assets/Images/snacks.jpeg";
   static const String badEatingHabitsYouCanBreakforGood = "Assets/Images/Bad Eating Habits You Can Break for Good.jpg";
   static const String lunch= "Assets/Images/Lunch.jpg";
   static const String dinner = "Assets/Images/Dinner.jpg";
@@ -215,6 +215,11 @@ class Assets {
   static const String elsee = "Assets/Images/else.png";
   static const String carefulof = "Assets/Images/carefulof.png";
   static const String specific = "Assets/Images/specific.png";
+  static const String yoga= "Assets/Images/yoga.jpeg";
+  static const String pilates = "Assets/Images/pilates.jpeg";
+  static const String meditation = "Assets/Images/meditation.jpeg";
+  static const String hitt = "Assets/Images/hiit.jpeg";
+  static const String bands = "Assets/Images/bands.jpeg";
 
 }
 

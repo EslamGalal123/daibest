@@ -22,10 +22,13 @@ class CustomMyWatchForm extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    AppStrings.diabest,
-                    style:TextStyle( letterSpacing: 3,color: AppColors.black1, fontFamily: "poppins",fontSize: 44,fontWeight: FontWeight.bold)
-                  ),
+                  Text(AppStrings.diabest,
+                      style: TextStyle(
+                          letterSpacing: 3,
+                          color: AppColors.black1,
+                          fontFamily: "poppins",
+                          fontSize: 44,
+                          fontWeight: FontWeight.bold)),
                   Text(
                     AppStrings.enjayyourlifewithdiabest,
                     maxLines: 1,
@@ -35,7 +38,6 @@ class CustomMyWatchForm extends StatelessWidget {
                       letterSpacing: 1,
                     ),
                   ),
-                 
                 ],
               ),
             )
@@ -55,10 +57,11 @@ class CustomMyWatchForm extends StatelessWidget {
             //   style: CustomTextStyles.lohit400style18,
             // )
             Container(
-  width: 80,
-  height: 25,
-  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
-)
+              width: 80,
+              height: 25,
+              decoration:
+                  BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+            )
           ],
         ),
         const SizedBox(
@@ -70,11 +73,12 @@ class CustomMyWatchForm extends StatelessWidget {
               "Dia Best Reading :       ",
               style: CustomTextStyles.lohit500style20,
             ),
-           Container(
-  width: 80,
-  height: 25,
-  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
-)
+            Container(
+              width: 80,
+              height: 25,
+              decoration:
+                  BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+            )
           ],
         ),
         const SizedBox(
@@ -87,10 +91,11 @@ class CustomMyWatchForm extends StatelessWidget {
               style: CustomTextStyles.lohit500style20,
             ),
             Container(
-  width: 80,
-  height: 25,
-  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
-)
+              width: 80,
+              height: 25,
+              decoration:
+                  BoxDecoration(border: Border.all(style: BorderStyle.solid)),
+            )
           ],
         ),
         const SizedBox(
@@ -118,11 +123,12 @@ class CustomMyWatchForm extends StatelessWidget {
                         "RBS :  ",
                         style: CustomTextStyles.lohit500style20,
                       ),
-                     Container(
-  width: 80,
-  height: 25,
-  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
-)
+                      Container(
+                        width: 80,
+                        height: 25,
+                        decoration: BoxDecoration(
+                            border: Border.all(style: BorderStyle.solid)),
+                      )
                     ],
                   ),
                   const SizedBox(
@@ -134,17 +140,17 @@ class CustomMyWatchForm extends StatelessWidget {
                         "HbA1c :  ",
                         style: CustomTextStyles.lohit500style20,
                       ),
-                     Container(
-  width: 80,
-  height: 25,
-  decoration: BoxDecoration(border: Border.all(style: BorderStyle.solid)),
-)
+                      Container(
+                        width: 80,
+                        height: 25,
+                        decoration: BoxDecoration(
+                            border: Border.all(style: BorderStyle.solid)),
+                      )
                     ],
                   ),
                 ],
               ),
             ),
-          
           ],
         ),
         const SizedBox(

@@ -12,6 +12,7 @@ import 'package:diabestapp/Features/Register_your_information/presentation/views
 import 'package:diabestapp/Features/Register_your_information/presentation/views/register_your_info_page3.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/views/register_your_information.dart';
 import 'package:diabestapp/Features/Splash1/Presentation/Views/Splash1.dart';
+import 'package:diabestapp/Features/Splash1/Presentation/Views/test.dart';
 import 'package:diabestapp/Features/Splash2/Presentation/views/Splash2.dart';
 import 'package:diabestapp/Features/auth/Presentation/Views/Verification_password.dart';
 import 'package:diabestapp/Features/auth/Presentation/Views/forget_password_view.dart';

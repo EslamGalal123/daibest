@@ -18,7 +18,7 @@ VoidCallback onpressed;
             margin: const EdgeInsets.all(10),
             height: MediaQuery.of(context).size.height*0.11,
             decoration: ShapeDecoration(
-              color: Color(0xFFF9F5F5),
+              color: Color(0xFFF3EEEE),
               shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20),
               ),
