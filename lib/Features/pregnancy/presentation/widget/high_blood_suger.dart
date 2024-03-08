@@ -25,7 +25,7 @@ class _HighBloodSugerState extends State<HighBloodSuger> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AddressPregnancy(text: "Do you suffer from extreme thirst?"),
+        AddressPregnancy(text: "Do you suffer from extreme \nthirst?"),
         Row(
           children: [
             const SizedBox(
