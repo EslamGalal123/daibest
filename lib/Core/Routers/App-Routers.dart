@@ -33,7 +33,7 @@ import 'package:go_router/go_router.dart';
 
 final GoRouter router =GoRouter(routes: [
   GoRoute(path:'/',
-  builder: (context,state)=>Splash2View() ,
+  builder: (context,state)=>ReminderMedicinsView() ,
   ),
   GoRoute(path:'/Splash2',
   builder: (context,state)=>const Splash2View() ,
