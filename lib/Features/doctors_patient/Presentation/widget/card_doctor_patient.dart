@@ -8,7 +8,7 @@ class CardPatientDoctor extends StatelessWidget {
   final String doctorImage;
   final String specialtyName;
 
-  CardPatientDoctor({
+  const CardPatientDoctor({
     Key? key,
     required this.doctorName,
     required this.doctorImage,

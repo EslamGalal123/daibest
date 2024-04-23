@@ -14,7 +14,7 @@ class _CheckBoxExampleState extends State<CheckBoxExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Checkbox Example'),
+        title:const Text('Checkbox Example'),
       ),
       body: Column(
         children: [
@@ -32,7 +32,7 @@ class _CheckBoxExampleState extends State<CheckBoxExample> {
             ],
           ),
           if (isChecked)
-            Column(
+            const Column(
               children: [
                 TextField(
                   decoration: InputDecoration(

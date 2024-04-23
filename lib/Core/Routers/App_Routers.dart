@@ -4,36 +4,34 @@ import 'package:diabestapp/Core/Widgets/custom_bottom_navigation.dart';
 import 'package:diabestapp/Features/Eating/presentation/view/eating_view.dart';
 import 'package:diabestapp/Features/Eating/presentation/view/meal_section.dart';
 import 'package:diabestapp/Features/Eating/presentation/widget/create_your_meal_form.dart';
-import 'package:diabestapp/Features/Eating/presentation/widget/custom_meal_section.dart';
 import 'package:diabestapp/Features/Home/presentatio/views/home_views.dart';
 import 'package:diabestapp/Features/On-Boarding/presentation/views/on-boarding-view.dart';
-import 'package:diabestapp/Features/On-Boarding/presentation/views/widgets/custom_nav_bar.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/views/register_Your_info_page1.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/views/register_your_info_page3.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/views/register_your_information.dart';
-import 'package:diabestapp/Features/Splash1/Presentation/Views/Splash1.dart';
-import 'package:diabestapp/Features/Splash1/Presentation/Views/test.dart';
 import 'package:diabestapp/Features/Splash2/Presentation/views/Splash2.dart';
 import 'package:diabestapp/Features/auth/Presentation/Views/Verification_password.dart';
 import 'package:diabestapp/Features/auth/Presentation/Views/forget_password_view.dart';
 import 'package:diabestapp/Features/auth/Presentation/Views/new_password.dart';
 import 'package:diabestapp/Features/auth/Presentation/Views/sign_in.dart';
 import 'package:diabestapp/Features/auth/Presentation/Views/sign_up.dart';
-import 'package:diabestapp/Features/doctor/data/model/doctor_model.dart';
 import 'package:diabestapp/Features/doctor/presentation/views/doctor.dart';
 import 'package:diabestapp/Features/doctor/presentation/views/edit_profile.dart';
 import 'package:diabestapp/Features/doctor/presentation/views/profile_doctor.dart';
 import 'package:diabestapp/Features/doctors_patient/Presentation/view/description_of_doctor.dart';
+import 'package:diabestapp/Features/language/presentation/language.dart';
 import 'package:diabestapp/Features/organs/presentation/view/organs_search.dart';
 import 'package:diabestapp/Features/pregnancy/presentation/view/pregnancy_view.dart';
 import 'package:diabestapp/Features/profile/Presentation/view/edit_profile_view.dart';
+import 'package:diabestapp/Features/reminder_medicins/presentation/view/reminder_details.dart';
 import 'package:diabestapp/Features/reminder_medicins/presentation/view/reminder_medicin.dart';
 import 'package:diabestapp/Features/sports/presention/view/sports_view.dart';
+import 'package:diabestapp/main.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router =GoRouter(routes: [
   GoRoute(path:'/',
-  builder: (context,state)=>ReminderMedicinsView() ,
+  builder: (context,state)=> const ChangeLanguage() ,
   ),
   GoRoute(path:'/Splash2',
   builder: (context,state)=>const Splash2View() ,
@@ -106,5 +104,11 @@ final GoRouter router =GoRouter(routes: [
   ),
   GoRoute(path:"/PregnancyView",
   builder: (context,state)=>const PregnancyView() ,
+  ),
+  GoRoute(path:"/ReminderDetails",
+  builder: (context,state)=>const ReminderDetails() ,
+  ),
+  GoRoute(path:"/ChangeLanguage",
+  builder: (context,state)=>const ChangeLanguage() ,
   ),
   ]);

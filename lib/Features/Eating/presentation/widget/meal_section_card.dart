@@ -8,7 +8,7 @@ class MealSectionCard extends StatelessWidget {
   final String image;
   final VoidCallback onTap;
 
-  MealSectionCard({
+  const MealSectionCard({
     required this.title,
     required this.icon,
     required this.items,
@@ -19,7 +19,7 @@ class MealSectionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(16),
+      margin:const EdgeInsets.all(16),
       child: InkWell(
         onTap: onTap,
         child: Column(
@@ -35,12 +35,12 @@ class MealSectionCard extends StatelessWidget {
               leading: Icon(icon),
               title: Text(
                 title,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style:const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
-            Divider(),
+           const Divider(),
             ExpansionTile(
-              title: Text('Like',style: CustomTextStyles.lohit500style20,),
+              title:const Text('Like',style: CustomTextStyles.lohit500style20,),
               children: [
                 for (String item in items)
                   ListTile(

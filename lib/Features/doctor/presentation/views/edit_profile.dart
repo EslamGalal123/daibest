@@ -10,10 +10,10 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class EditProfileDoctor extends StatelessWidget {
   EditProfileDoctor({super.key});
- TextEditingController citystreetblocknumber = new TextEditingController();
-TextEditingController phoneNumbe = new TextEditingController();
-TextEditingController whatsApp = new TextEditingController();
-TextEditingController facebook = new TextEditingController();
+ TextEditingController citystreetblocknumber =  TextEditingController();
+TextEditingController phoneNumbe =  TextEditingController();
+TextEditingController whatsApp =  TextEditingController();
+TextEditingController facebook =  TextEditingController();
 
   @override
   Widget build(BuildContext context) {

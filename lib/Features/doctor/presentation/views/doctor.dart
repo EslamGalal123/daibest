@@ -12,10 +12,10 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class DoctorView extends StatelessWidget {
   DoctorView({super.key});
-  TextEditingController citystreetblocknumber = new TextEditingController();
-TextEditingController phoneNumbe = new TextEditingController();
-TextEditingController whatsApp = new TextEditingController();
-TextEditingController facebook = new TextEditingController();
+  TextEditingController citystreetblocknumber =  TextEditingController();
+TextEditingController phoneNumbe =  TextEditingController();
+TextEditingController whatsApp =  TextEditingController();
+TextEditingController facebook =  TextEditingController();
 
 
   @override
@@ -68,25 +68,25 @@ TextEditingController facebook = new TextEditingController();
                     child: CustomTextFormField(
                       mycontroller: citystreetblocknumber,
                   labelText: AppStrings.citystreetblocknumber,
-                  prefixIcon: Icon(Icons.location_city_rounded),
+                  prefixIcon:const Icon(Icons.location_city_rounded),
                 )),
                 SliverToBoxAdapter(
                     child: CustomTextFormField(
                       mycontroller: phoneNumbe,
                   labelText: AppStrings.phoneNumbe,
-                  prefixIcon: Icon(Icons.phone),
+                  prefixIcon:const Icon(Icons.phone),
                 )),
                 SliverToBoxAdapter(
                     child: CustomTextFormField(
                       mycontroller: facebook,
                   labelText: "Link Of Facebook",
-                  prefixIcon: Icon(Icons.facebook),
+                  prefixIcon:const Icon(Icons.facebook),
                 )),
                 SliverToBoxAdapter(
                     child: CustomTextFormField(
                       mycontroller: whatsApp,
                   labelText: "Link Of WhatsApp",
-                  prefixIcon: Icon(Icons.chat),
+                  prefixIcon:const Icon(Icons.chat),
                 )),
                  SliverToBoxAdapter(
                     child: SizedBox(

@@ -79,7 +79,7 @@ setState((){
   Future pickImageFromGallery()async{
  XFile? xFileImage =await ImagePicker().pickImage(source: ImageSource.gallery);
   File image =File(xFileImage!.path);
-  Navigator.of(this.context).pop();
+  Navigator.of(context).pop();
 setState((){
   selectImage =image;
   isFile=true;

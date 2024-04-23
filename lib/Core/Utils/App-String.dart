@@ -89,7 +89,22 @@ healthyMovieSnacks="Healthy Movie Snacks",
 lunch="Lunch",
 dinner="Dinner",
 createyourmealplan="Create your plan",
-mealsections="Meal Sections"
+mealsections="Meal Sections",
+today="today",
+noTaskTitle="No Task Title",
+noTaskSubTitle="No TaskSub Title",
+taskCompleted="Task Completed",
+addareminder="Add a Reminder",
+delete="Delete",
+cerate="Cerate",
+color="Color",
+reminder="Reminder",
+reminderhint="Reminder hint",
+reminderErrorMsg="Reminder Error Msg",
+tilteErrorMsg="Tilte Error Msg",
+tilteHint="Tilte Hint",
+tilte="Tilte",
+completed="Completed"
 
   ;
 }

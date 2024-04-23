@@ -1,5 +1,4 @@
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
-import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -18,7 +17,7 @@ VoidCallback onpressed;
             margin: const EdgeInsets.all(10),
             height: MediaQuery.of(context).size.height*0.11,
             decoration: ShapeDecoration(
-              color: Color(0xFFF3EEEE),
+              color: const Color(0xFFF3EEEE),
               shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(20),
               ),
@@ -27,7 +26,7 @@ VoidCallback onpressed;
           title: Text(titlehome, style: CustomTextStyles.lohit500style22.copyWith(fontSize: MediaQuery.of(context).devicePixelRatio*8.5),),
           subtitle: Row(
             children: [
-              Icon(Icons.star,size:15,color:Colors.blue,),
+            const  Icon(Icons.star,size:15,color:Colors.blue,),
               Text(subtitlehome,style:CustomTextStyles.lohit300style16 ),
             ],
           ),

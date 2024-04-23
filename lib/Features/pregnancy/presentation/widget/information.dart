@@ -2,6 +2,7 @@ import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class PregnancyInformation extends StatelessWidget {
    PregnancyInformation({super.key,required this.text});
 String? text;

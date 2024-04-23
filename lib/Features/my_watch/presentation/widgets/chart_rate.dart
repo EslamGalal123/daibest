@@ -67,7 +67,7 @@ class LineChartWidget extends StatelessWidget {
         LineChartData(
           lineBarsData: [
             LineChartBarData(
-              spots: [
+              spots:const [
                 FlSpot(0, 3),
                 FlSpot(2.6, 3),
                 FlSpot(4.9, 5),
@@ -77,7 +77,7 @@ class LineChartWidget extends StatelessWidget {
                 
               ],
               isCurved: true,
-              dotData: FlDotData(show: false),
+              dotData:const FlDotData(show: false),
               color: Colors.black,
               barWidth: 2,
             ),
@@ -86,8 +86,8 @@ class LineChartWidget extends StatelessWidget {
           // maxX: 11,
           // minY: 2,
           // maxY: 5,
-          backgroundColor: Color(0xFFF9F5F5),
-          titlesData: FlTitlesData(
+          backgroundColor:const Color(0xFFF9F5F5),
+          titlesData:const FlTitlesData(
             show: false,
             bottomTitles: AxisTitles(
               sideTitles: SideTitles(
@@ -112,7 +112,7 @@ class LineChartWidget extends StatelessWidget {
 // },
             ),)
           ),
-          gridData: FlGridData(
+          gridData:const FlGridData(
             show: true,
             drawHorizontalLine: true,
           ),

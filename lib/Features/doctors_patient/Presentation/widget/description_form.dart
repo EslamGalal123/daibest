@@ -1,6 +1,5 @@
 import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-String.dart';
-import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Features/auth/Presentation/widgets/custom_social_icons.dart';
 import 'package:flutter/material.dart';
@@ -123,11 +122,11 @@ class DescriptionsForm extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            customSocialIcons(image: Assets.imagesImageFacebook),
+            CustomSocialIcons(image: Assets.imagesImageFacebook),
              SizedBox(
               width: width*0.04,
             ),
-            customSocialIcons(image: Assets.imageswhatsapp),
+            CustomSocialIcons(image: Assets.imageswhatsapp),
           ],
         ),
       ],

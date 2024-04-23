@@ -8,8 +8,8 @@ class CreateNewPassword extends StatelessWidget {
 
   CreateNewPassword({Key? key, }) : super(key: key);
   
-TextEditingController newpassword = new TextEditingController();
-TextEditingController confirmThePassword = new TextEditingController();
+TextEditingController newpassword =  TextEditingController();
+TextEditingController confirmThePassword = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ CustomTextFormField(labelText: "Confirm Password", mycontroller: confirmThePassw
                     // Handle checkbox state
                   },
                 ),
-                Text('Remember me'),
+             const   Text('Remember me'),
               ],
             ),
             SizedBox(height: height*0.04),
@@ -85,7 +85,7 @@ CustomTextFormField(labelText: "Confirm Password", mycontroller: confirmThePassw
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(''),
+          title:const Text(''),
           content: Image.asset(
             'assets/New Password/congrats.png',
             fit: BoxFit.cover,
@@ -96,8 +96,8 @@ CustomTextFormField(labelText: "Confirm Password", mycontroller: confirmThePassw
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('Close',style: TextStyle(color: Colors.white),),
-              style: ElevatedButton.styleFrom(primary: Color(0xFF246BFE)),
+              style: ElevatedButton.styleFrom(primary:const Color(0xFF246BFE)),
+              child: const Text('Close',style: TextStyle(color: Colors.white),),
             ),
           ],
         );

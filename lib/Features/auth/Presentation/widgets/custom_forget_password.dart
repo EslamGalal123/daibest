@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class CustomForgetPasswordForm extends StatelessWidget {
   CustomForgetPasswordForm({Key? key}) : super(key: key);
-TextEditingController emailAddress = new TextEditingController();
+TextEditingController emailAddress =  TextEditingController();
 
   @override
   Widget build(BuildContext context) {

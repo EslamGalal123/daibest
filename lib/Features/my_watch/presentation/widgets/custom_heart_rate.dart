@@ -23,7 +23,7 @@ class CustomHearttRate extends StatelessWidget {
             
             const    Text("Pules-Rate",style: CustomTextStyles.lohit500style22,),
             const   SizedBox(height: 10,),
-            LineChartWidget(),
+          const  LineChartWidget(),
                 Row(
                   children: [
                const     Text("Heart Beats :  ",style: CustomTextStyles.lohit500style20,),

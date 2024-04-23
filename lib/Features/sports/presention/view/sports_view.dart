@@ -1,9 +1,10 @@
 import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
-import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutPlanScreen extends StatelessWidget {
+  const WorkoutPlanScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,19 +12,19 @@ class WorkoutPlanScreen extends StatelessWidget {
         title:const Text('Workout Plan',style: CustomTextStyles.lohit500style20,),
       ),
       body: ListView(
-        children: [
-         const Padding(
+        children: const [
+         Padding(
             padding:  EdgeInsets.all(16.0),
             child: Text(
               'Categories',
               style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             ),
           ),
-        const  CardItem(imagePath: Assets.hitt, title: 'Hllt'),
-         const CardItem(imagePath: Assets.yoga, title: 'Yoga'),
-         const CardItem(imagePath: Assets.pilates, title: 'Pilates'),
-         const CardItem(imagePath: Assets.bands, title: 'BANDS'),
-         const CardItem(imagePath: Assets.meditation, title: 'Meditation'),
+        CardItem(imagePath: Assets.hitt, title: 'Hllt'),
+         CardItem(imagePath: Assets.yoga, title: 'Yoga'),
+         CardItem(imagePath: Assets.pilates, title: 'Pilates'),
+         CardItem(imagePath: Assets.bands, title: 'BANDS'),
+         CardItem(imagePath: Assets.meditation, title: 'Meditation'),
           AfterCardsContent(),
         ],
       ),
@@ -35,7 +36,7 @@ class CardItem extends StatelessWidget {
   final String imagePath;
   final String title;
 
-  const CardItem({required this.imagePath, required this.title});
+  const CardItem({super.key, required this.imagePath, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +68,8 @@ class CardItem extends StatelessWidget {
 }
 
 class AfterCardsContent extends StatelessWidget {
+  const AfterCardsContent({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -80,7 +83,7 @@ class AfterCardsContent extends StatelessWidget {
           ),
         ), 
         ListTile(
-          title: Text("Walking"),
+          title:const Text("Walking"),
           leading: Image.asset("Assets/Images/walking.png"),
           trailing:Image.asset("Assets/Images/right.png"), 
           onTap: () {
@@ -92,7 +95,7 @@ class AfterCardsContent extends StatelessWidget {
         ),
 
         ListTile(
-          title: Text("Running"),
+          title:const Text("Running"),
           leading: Image.asset("Assets/Images/running.png"),
           trailing:Image.asset("Assets/Images/right.png"), 
           onTap: () {
@@ -104,7 +107,7 @@ class AfterCardsContent extends StatelessWidget {
         ),
 
         ListTile(
-          title: Text("Biking"),
+          title:const Text("Biking"),
           leading: Image.asset("Assets/Images/biking.png"),
           trailing:Image.asset("Assets/Images/right.png"),
           onTap: () {

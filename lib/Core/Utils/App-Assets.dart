@@ -220,6 +220,7 @@ class Assets {
   static const String meditation = "Assets/Images/meditation.jpeg";
   static const String hitt = "Assets/Images/hiit.jpeg";
   static const String bands = "Assets/Images/bands.jpeg";
+  static const String noTasks = "Assets/Images/no_tasks.png";
 
 }
 

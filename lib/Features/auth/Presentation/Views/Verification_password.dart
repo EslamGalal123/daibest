@@ -22,7 +22,7 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
   }
 
   void startCountdown() {
-    Timer.periodic(Duration(seconds: 1), (timer) {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         if (countdown > 0) {
           countdown--;
@@ -37,7 +37,7 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('OTP Verification'),
+        title:const Text('OTP Verification'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -45,14 +45,14 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
           
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 40,),
-            Text(
+           const SizedBox(height: 40,),
+          const  Text(
               'OTP Code Verification',
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8.0),
+           const SizedBox(height: 8.0),
             Text('Enter code sent to $emailAddress'),
-            SizedBox(height: 16.0),
+           const SizedBox(height: 16.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -60,12 +60,12 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
                   Container(
                     width: 40.0,
                     height: 40.0,
-                    margin: EdgeInsets.symmetric(horizontal: 4.0),
+                    margin:const EdgeInsets.symmetric(horizontal: 4.0),
                     child: TextFormField(
                       textAlign: TextAlign.center,
                       keyboardType: TextInputType.number,
-                      style: TextStyle(fontSize: 16.0),
-                      decoration: InputDecoration(
+                      style:const TextStyle(fontSize: 16.0),
+                      decoration:const InputDecoration(
                         border: OutlineInputBorder(),
                       ),
                       readOnly: true,
@@ -75,18 +75,18 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
                   ),
               ],
             ),
-            SizedBox(height: 16.0),
+           const SizedBox(height: 16.0),
             Text('Reset code in $countdown s'),
-            SizedBox(height: 16.0),
+           const SizedBox(height: 16.0),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Color(0xFF246BFE),  padding:EdgeInsets.symmetric(horizontal: 40)),
+              style: ElevatedButton.styleFrom(primary:const Color(0xFF246BFE),  padding: const EdgeInsets.symmetric(horizontal: 40)),
               onPressed: () {
                 _onContinuePressed();
 customNavigate(context, "/CreateNewPassword");
               },
-              child: Text('Continue',style: TextStyle(color: Colors.white,fontSize: 16),),
+              child:const Text('Continue',style: TextStyle(color: Colors.white,fontSize: 16),),
             ),
-            SizedBox(height: 16.0),
+           const SizedBox(height: 16.0),
             Expanded(
               child: buildNumericKeyboard(),
             ),
@@ -146,7 +146,7 @@ customNavigate(context, "/CreateNewPassword");
       child: Container(
         width: 60.0,
         height: 60.0,
-        margin: EdgeInsets.all(8.0),
+        margin:const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: Colors.grey[200],
           borderRadius: BorderRadius.circular(8.0),
@@ -154,7 +154,7 @@ customNavigate(context, "/CreateNewPassword");
         child: Center(
           child: Text(
             value,
-            style: TextStyle(fontSize: 24.0),
+            style:const TextStyle(fontSize: 24.0),
           ),
         ),
       ),
@@ -169,12 +169,12 @@ customNavigate(context, "/CreateNewPassword");
       child: Container(
         width: 60.0,
         height: 60.0,
-        margin: EdgeInsets.all(8.0),
+        margin:const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: Colors.yellow[700],
           borderRadius: BorderRadius.circular(8.0),
         ),
-        child: Center(
+        child:const Center(
           child: Icon(
             Icons.backspace,
             color: Colors.white,
@@ -188,8 +188,8 @@ customNavigate(context, "/CreateNewPassword");
     return Container(
       width: 60.0,
       height: 60.0,
-      margin: EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
+      margin:const EdgeInsets.all(8.0),
+      decoration:const BoxDecoration(
         color: Colors.transparent,
       ),
     );

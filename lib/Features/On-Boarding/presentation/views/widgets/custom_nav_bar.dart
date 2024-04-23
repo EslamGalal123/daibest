@@ -1,5 +1,6 @@
 
 import 'package:diabestapp/Core/Utils/App-String.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavBar extends StatelessWidget {
@@ -14,7 +15,7 @@ class CustomNavBar extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Text(
-          AppStrings.skip,
+          Applocalizations.of(context)!.translatetext("skip"),
           style: Theme.of(context).textTheme.titleMedium
           
         ),

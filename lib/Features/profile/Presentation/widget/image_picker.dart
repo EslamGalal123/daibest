@@ -20,51 +20,45 @@ class _HomeScreenState extends State<ImagePickervView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:Container(
-          // decoration: const BoxDecoration(
-          //     gradient: LinearGradient(
-          //   colors: [Color(0xffa1c4fd), Color(0xffc2e9fb)],
-          // )),
-          child: Center(
-            child: Stack(
-              alignment: Alignment.topCenter,
-                  children: [
-            Container(
-              width: MediaQuery.of(context).size.width*0.44,
-              height: MediaQuery.of(context).size.height*0.21,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: AppColors.grey,
-                  width: 2.0,
-                ),
-              ),
-              child: ClipOval(
-                child: isFile
-                    ? Image.file(
-                        selectImage!,
-                        fit: BoxFit.cover,
-                      )
-                    : Image.asset(
-                        Assets.imagesImageProfilDoctor,
-                        fit: BoxFit.cover,
-                      ),
+        body:Center(
+          child: Stack(
+            alignment: Alignment.topCenter,
+                children: [
+          Container(
+            width: MediaQuery.of(context).size.width*0.44,
+            height: MediaQuery.of(context).size.height*0.21,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: AppColors.grey,
+                width: 2.0,
               ),
             ),
-            Positioned(
-              right: 0,
-              bottom: 0,
-              child:
-                    GestureDetector(onTap:(){
-                      showDialog(context: context, builder: (context){
-                return SimpleDialog(children: [
-                  TextButton(onPressed:pickImageFromCamera , child: const Text(AppStrings.camara)),
-                  TextButton(onPressed: pickImageFromGallery, child: const Text(AppStrings.gallery)),
-                TextButton(onPressed: cancel, child: const Text(AppStrings.cancel)),], ); }); },
-                     
-                     child:const Icon(Icons.camera_alt))
-                 )]),
+            child: ClipOval(
+              child: isFile
+                  ? Image.file(
+                      selectImage!,
+                      fit: BoxFit.cover,
+                    )
+                  : Image.asset(
+                      Assets.imagesImageProfilDoctor,
+                      fit: BoxFit.cover,
+                    ),
+            ),
           ),
+          Positioned(
+            right: 0,
+            bottom: 0,
+            child:
+                  GestureDetector(onTap:(){
+                    showDialog(context: context, builder: (context){
+              return SimpleDialog(children: [
+                TextButton(onPressed:pickImageFromCamera , child: const Text(AppStrings.camara)),
+                TextButton(onPressed: pickImageFromGallery, child: const Text(AppStrings.gallery)),
+              TextButton(onPressed: cancel, child: const Text(AppStrings.cancel)),], ); }); },
+                   
+                   child:const Icon(Icons.camera_alt))
+               )]),
         ) 
             );}
            

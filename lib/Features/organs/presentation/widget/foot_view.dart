@@ -1,5 +1,4 @@
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
-import 'package:diabestapp/Features/organs/presentation/widget/foot_form.dart';
 import 'package:flutter/material.dart';
 
 class FootView extends StatelessWidget {

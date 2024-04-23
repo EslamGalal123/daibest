@@ -21,7 +21,7 @@ class _Splash2ViewState extends State<Splash2View> {
     delayedNavigate(context, "/signIn");
           
     } else {
-      delayedNavigate(context, "/onBoarding");
+      delayedNavigate(context, "/ChangeLanguage");
     }
     super.initState();
   }

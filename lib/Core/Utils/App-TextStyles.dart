@@ -87,3 +87,37 @@ abstract class CustomTextStyles {
 );
 }
 
+ThemeData getAppTheme() {
+  ThemeData(
+
+                  textTheme: TextTheme(
+                    titleLarge: TextStyle(
+                        fontSize:  12,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "poppins",
+                        color: AppColors.primarycolor),
+                    titleMedium: TextStyle(
+                        fontSize:  9,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "poppins",
+                        color: AppColors.black1),
+                    titleSmall: TextStyle(
+                        fontSize: 7,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "poppins",
+                        color: AppColors.black1),
+                    bodyMedium: TextStyle(
+                        fontSize:  8,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "poppins",
+                        color: AppColors.black1),
+                    bodySmall: TextStyle(
+                        fontSize:  6.5,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "poppins",
+                        color: AppColors.black2),
+                  ),
+                       scaffoldBackgroundColor: AppColors.offwhite);
+
+    throw UnimplementedError('Unhandled state: ');
+}

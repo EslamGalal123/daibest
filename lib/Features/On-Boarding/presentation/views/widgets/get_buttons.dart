@@ -4,6 +4,7 @@ import 'package:diabestapp/Core/Widgets/custom_btn.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/On-Boarding/Functions/on_boarding.dart';
 import 'package:diabestapp/Features/On-Boarding/data/models/on_bording_model.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class GetButtons extends StatelessWidget {
@@ -19,7 +20,7 @@ class GetButtons extends StatelessWidget {
       return Column(
         children: [
           CustomBtn(
-            text: AppStrings.createAccount,
+            text: Applocalizations.of(context)!.translatetext("createAccount"),
             onPressed: () {
               onBoardingVisited();
               customReplacementNavigate(context, "/signUp");
@@ -32,7 +33,7 @@ class GetButtons extends StatelessWidget {
               customReplacementNavigate(context, "/signIn");
             },
             child: Text(
-              AppStrings.loginNow,
+              Applocalizations.of(context)!.translatetext( "loginNow"),
               style: Theme.of(context).textTheme.titleSmall
               
             ),
@@ -41,7 +42,7 @@ class GetButtons extends StatelessWidget {
       );
     } else {
       return CustomBtn(
-        text: AppStrings.next,
+        text: Applocalizations.of(context)!.translatetext("next"),
         onPressed: () {
           controller.nextPage(
             duration: const Duration(microseconds: 200),

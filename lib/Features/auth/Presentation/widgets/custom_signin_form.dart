@@ -13,8 +13,8 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class CustomSignInForm extends StatelessWidget {
    CustomSignInForm({super.key});
-  TextEditingController emailAddress= new TextEditingController();
-TextEditingController password= new TextEditingController();
+  TextEditingController emailAddress= TextEditingController();
+TextEditingController password=  TextEditingController();
 
 
   @override
@@ -62,9 +62,9 @@ TextEditingController password= new TextEditingController();
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            customSocialIcons(image: Assets.imagesImageFacebook),
-            customSocialIcons(image: Assets.imagesImageGoogle),
-            customSocialIcons(image: Assets.imagesImageApple),
+            CustomSocialIcons(image: Assets.imagesImageFacebook),
+            CustomSocialIcons(image: Assets.imagesImageGoogle),
+            CustomSocialIcons(image: Assets.imagesImageApple),
           ],
         ),
          SizedBox(

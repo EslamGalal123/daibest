@@ -13,42 +13,42 @@ class CustomMealSectionForm extends StatelessWidget {
           MealSectionCard(
             title: 'Breakfast',
             icon: Icons.fastfood,
-            items: ['Bread', 'Egg', 'Cheese', 'Milk'],
+            items: const ['Bread', 'Egg', 'Cheese', 'Milk'],
             image: Assets.breakfast,
             onTap: () => _openDetailsPage(context, 'Breakfast Details'),
           ),
           MealSectionCard(
             title: 'Lunch',
             icon: Icons.local_dining,
-            items: ['Rice', 'Meat', 'Fish', 'Chicken'],
+            items:const ['Rice', 'Meat', 'Fish', 'Chicken'],
             image: Assets.lunch,
             onTap: () => _openDetailsPage(context, 'Lunch Details'),
           ),
           MealSectionCard(
             title: 'Dinner',
             icon: Icons.dinner_dining,
-            items: ['Yogurt', 'Fruits', 'Dates'],
+            items: const['Yogurt', 'Fruits', 'Dates'],
             image: Assets.dinner, // صورة العشاء
             onTap: () => _openDetailsPage(context, 'Dinner Details'),
           ),
           MealSectionCard(
             title: 'Bad Eating Habits You Can Break for Good',
             icon: Icons.fastfood,
-            items: ['Chips', 'Nuts', 'Chocolate'],
+            items:const ['Chips', 'Nuts', 'Chocolate'],
             image: Assets.healthyMovieSnacks, // صورة الوجبة الخفيفة
             onTap: () => _openDetailsPage(context, 'Snack Details'),
           ),
           MealSectionCard(
             title: 'Healthy Movie Snacks',
             icon: Icons.cake,
-            items: ['Cake', 'Ice Cream', 'Cookies'],
+            items:const ['Cake', 'Ice Cream', 'Cookies'],
             image: Assets.badEatingHabitsYouCanBreakfor,
             onTap: () => _openDetailsPage(context, 'Dessert Details'),
           ),
           MealSectionCard(
             title: 'How to Eat Healthy and Avoid Fad Diets',
             icon: Icons.local_cafe,
-            items: ['Coffee', 'Tea', 'Juice'],
+            items:const ['Coffee', 'Tea', 'Juice'],
             image: Assets.badEatingHabitsYouCanBreakforGood,
             onTap: () => _openDetailsPage(context, 'Drinks Details'),
           ),

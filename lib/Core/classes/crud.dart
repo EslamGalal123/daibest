@@ -1,9 +1,6 @@
 import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-
 import '../functions/check_internet.dart';
 import 'status_request.dart';
 import 'package:http/http.dart' as http;
@@ -23,8 +20,6 @@ class CRUD {
 
 
         );
-        print(data
-        );
         if (response.statusCode == 200 || response.statusCode == 201) {
           Map responseBody = jsonDecode(response.body);
 
@@ -36,7 +31,6 @@ class CRUD {
         return const Left(StatusRequest.failure);
       }
     } catch (e) {
-      print(e);
       return const Left(StatusRequest.serverException);
     }
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
-class customSocialIcons extends StatelessWidget {
-  customSocialIcons({super.key,required this.image});
+class CustomSocialIcons extends StatelessWidget {
+  CustomSocialIcons({super.key,required this.image});
 String image;
   @override
   Widget build(BuildContext context) {

@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class CustomSignUpForm extends StatelessWidget {
   CustomSignUpForm({super.key});
-  TextEditingController fullname = new TextEditingController();
-  TextEditingController nationalID = new TextEditingController();
-  TextEditingController emailAddress = new TextEditingController();
-  TextEditingController password = new TextEditingController();
-  TextEditingController confirmThePassword = new TextEditingController();
+  TextEditingController fullname =  TextEditingController();
+  TextEditingController nationalID =  TextEditingController();
+  TextEditingController emailAddress = TextEditingController();
+  TextEditingController password = TextEditingController();
+  TextEditingController confirmThePassword =  TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -58,38 +58,36 @@ class _CustomInfoForPatientState extends State<CustomInfoForPatient> {
         Row(
           children: [
             Expanded(
-              child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                     Text(
-                      AppStrings.maritalStatus,
-                      style:CustomTextStyles.lohit500style20,
-                          
-                    ),
-                    DropdownButton<String>(
-                      value: maritalStatus,
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          maritalStatus = newValue!;
-                        });
-                      },
-                      items: <String>[
-                        AppStrings.single,
-                        AppStrings.married,
-                        AppStrings.divorced,
-                        AppStrings.widowed
-                      ].map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value,
-                          style: Theme.of(context).textTheme.bodySmall),
-                          
-                        );
-                      }).toList(),
-                    ),
-                  ],
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                 const  Text(
+                    AppStrings.maritalStatus,
+                    style:CustomTextStyles.lohit500style20,
+                        
+                  ),
+                  DropdownButton<String>(
+                    value: maritalStatus,
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        maritalStatus = newValue!;
+                      });
+                    },
+                    items: <String>[
+                      AppStrings.single,
+                      AppStrings.married,
+                      AppStrings.divorced,
+                      AppStrings.widowed
+                    ].map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value,
+                        style: Theme.of(context).textTheme.bodySmall),
+                        
+                      );
+                    }).toList(),
+                  ),
+                ],
               ),
             ),
           ],
