@@ -1,4 +1,5 @@
 import 'package:diabestapp/Features/auth/Presentation/widgets/custom_forget_password.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordViews extends StatelessWidget {
@@ -9,7 +10,7 @@ class ForgotPasswordViews extends StatelessWidget {
     return  Scaffold(
        appBar: AppBar(
         elevation: 0,
-        title:const Text('Forget Password')),
+        title: Text(Applocalizations.of(context)!.translatetext("Forget Password"))),
       body: SafeArea(
         child: Padding(
           padding:const  EdgeInsets.symmetric(horizontal: 16.0),

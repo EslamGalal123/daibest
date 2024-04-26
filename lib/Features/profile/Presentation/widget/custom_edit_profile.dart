@@ -2,6 +2,7 @@ import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Widgets/custom_info_for_patient.dart';
 import 'package:diabestapp/Core/Widgets/custom_text_field.dart';
 import 'package:diabestapp/Features/profile/Functions/edit_profile.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -16,7 +17,7 @@ TextEditingController name =  TextEditingController();
       children: [
         CustomTextFormField(
           mycontroller: name,
-          labelText: AppStrings.name),
+          labelText:""),
        const CustomInfoForPatient(),
         const SizedBox(
           height: 30,
@@ -35,9 +36,9 @@ TextEditingController name =  TextEditingController();
                     side:const BorderSide(width: 1, color: Colors.grey),
                   ),
                 ),
-                child: const Text(
-                  'Save Profile',
-                  style: TextStyle(fontSize: 19.0,color: Colors.white, fontFamily:"poppins",fontWeight: FontWeight.w500),
+                child:  Text(
+                  Applocalizations.of(context)!.translatetext("saveprofile"),
+                  style:const TextStyle(fontSize: 19.0,color: Colors.white, fontFamily:"poppins",fontWeight: FontWeight.w500),
                 ),
               ),
             ),
@@ -46,7 +47,7 @@ TextEditingController name =  TextEditingController();
               onPressed: () {
                 showChangePasswordDialog(context);
               },
-              child:const Text(AppStrings.changepassword,style: TextStyle(fontSize: 16),),
+              child: Text(Applocalizations.of(context)!.translatetext("changepassword"),style:const TextStyle(fontSize: 16),),
             ),
           ],
         )

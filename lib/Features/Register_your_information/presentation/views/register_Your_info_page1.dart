@@ -4,6 +4,7 @@ import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_form_info_page2.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class RegisterYourInformationPage2 extends StatelessWidget {
@@ -13,7 +14,7 @@ class RegisterYourInformationPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text(AppStrings.registerYourInformation,style: CustomTextStyles.lohit500style24,),
+        title: Text(Applocalizations.of(context)!.translatetext("registerYourInformation"),style: CustomTextStyles.lohit500style24,),
         elevation: 0,
         backgroundColor: AppColors.offwhite,
       ),
@@ -25,7 +26,7 @@ class RegisterYourInformationPage2 extends StatelessWidget {
            const  SliverToBoxAdapter(child:CustomFormInfoPage2()),
            const  SliverToBoxAdapter(child:SizedBox(height: 7,)),
              SliverToBoxAdapter(child:CustomBtn(text: AppStrings.next,onPressed: () {
-               customNavigate(context, "/registerYourInformationpage3");
+               customNavigate(context, "/CustomBtnNavigation");
              },)),
              
              ])));

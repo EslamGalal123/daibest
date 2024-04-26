@@ -2,6 +2,7 @@ import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Features/auth/Presentation/widgets/custom_social_icons.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionsForm extends StatelessWidget {
@@ -37,7 +38,7 @@ class DescriptionsForm extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Name :",
+             Applocalizations.of(context)!.translatetext("Name  "),
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(
@@ -55,8 +56,8 @@ class DescriptionsForm extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Specialization :",
-              style: Theme.of(context).textTheme.bodyMedium,
+                            Applocalizations.of(context)!.translatetext("specialization"),
+           style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(
               width: width * 0.03,
@@ -73,7 +74,7 @@ class DescriptionsForm extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Phone Number :",
+              Applocalizations.of(context)!.translatetext("phoneNumbe"),
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(
@@ -91,8 +92,8 @@ class DescriptionsForm extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Clinic Address :",
-              style: Theme.of(context).textTheme.bodyMedium,
+ Applocalizations.of(context)!.translatetext("clinicaddress")        ,
+       style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(
               width: width * 0.03,
@@ -111,7 +112,7 @@ class DescriptionsForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              AppStrings.contactnow,
+               Applocalizations.of(context)!.translatetext("contactnow"),
               style: Theme.of(context).textTheme.bodyMedium,
             ),
           ],

@@ -4,6 +4,7 @@ import 'package:diabestapp/Features/contact_us/Presentation/views/contact_us.dar
 import 'package:diabestapp/Features/doctors_patient/Presentation/view/doctor_patient.dart';
 import 'package:diabestapp/Features/my_watch/presentation/views/my_watch.dart';
 import 'package:diabestapp/Features/profile/Presentation/view/profile_view.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomBtnNavigation extends StatefulWidget {
@@ -40,26 +41,26 @@ backgroundColor:AppColors.white,
             selectedFontSize: 20,
             unselectedFontSize: 20,
 
-            items: const <BottomNavigationBarItem>[
+            items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
+                icon:const Icon(Icons.home),
+                label: Applocalizations.of(context)!.translatetext("Home"),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.medical_services),
-                label: 'Doctor',
+                icon:const Icon(Icons.medical_services),
+                label: Applocalizations.of(context)!.translatetext("doctor"),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.watch),
-                label: 'Diabest',
+                icon:const Icon(Icons.watch),
+                label: Applocalizations.of(context)!.translatetext("Diabest"),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.contact_phone_sharp),
-                label: 'Contact Us',
+                icon:const Icon(Icons.contact_phone_sharp),
+                label: Applocalizations.of(context)!.translatetext("Contact Us"),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Profile',
+                icon:const Icon(Icons.person),
+                label: Applocalizations.of(context)!.translatetext("Profile"),
               ),
             ],
           ),

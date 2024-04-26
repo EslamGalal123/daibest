@@ -3,6 +3,7 @@ import 'package:diabestapp/Core/Widgets/custom_btn_profile.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/profile/Presentation/widget/custom_profile_form.dart';
 import 'package:diabestapp/Features/profile/Presentation/widget/image_picker.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatelessWidget {
@@ -39,7 +40,7 @@ class ProfileView extends StatelessWidget {
                 ),
              
                CustomBtnProfile(
-                text: AppStrings.editprofile,
+                text: Applocalizations.of(context)!.translatetext("editprofile"),
                 onPressed: () {
                   customNavigate(context, "/editprofile");
                 },

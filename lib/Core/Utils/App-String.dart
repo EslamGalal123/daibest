@@ -80,7 +80,6 @@ hepatologist="Hepatologist",
 contactnow="Contact Now :",
 diabest="DIABEST",
 enjayyourlifewithdiabest="ENJOY YOUR LIFE WITH DIABEST",
-
 mealPlanner="Meal Planner",
 badEatingHabitsYouCanBreakforGood="Bad Eating Habits You Can Break for Good",
 breakfast="Break Fast",
@@ -105,6 +104,8 @@ tilteErrorMsg="Tilte Error Msg",
 tilteHint="Tilte Hint",
 tilte="Tilte",
 completed="Completed"
+
+
 
   ;
 }

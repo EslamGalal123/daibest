@@ -2,6 +2,7 @@ import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomMyWatchForm extends StatelessWidget {
@@ -48,8 +49,8 @@ class CustomMyWatchForm extends StatelessWidget {
         ),
         Row(
           children: [
-            const Text(
-              "Blood Suger Type :      ",
+            Text(
+              Applocalizations.of(context)!.translatetext( "Blood Suger Type :      "),
               style: CustomTextStyles.lohit500style20,
             ),
             // Text(
@@ -69,8 +70,8 @@ class CustomMyWatchForm extends StatelessWidget {
         ),
         Row(
           children: [
-            const Text(
-              "Dia Best Reading :       ",
+             Text(
+               Applocalizations.of(context)!.translatetext("Dia Best Reading :       "),
               style: CustomTextStyles.lohit500style20,
             ),
             Container(
@@ -86,8 +87,8 @@ class CustomMyWatchForm extends StatelessWidget {
         ),
         Row(
           children: [
-            const Text(
-              "Classification Suger :  ",
+             Text(
+              Applocalizations.of(context)!.translatetext( "Classification Suger :  "),
               style: CustomTextStyles.lohit500style20,
             ),
             Container(
@@ -101,10 +102,10 @@ class CustomMyWatchForm extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        const Row(
+         Row(
           children: [
             Text(
-              "Medical Test",
+              Applocalizations.of(context)!.translatetext( "Medical Test"),
               style: CustomTextStyles.lohit500style22,
             )
           ],
@@ -119,8 +120,8 @@ class CustomMyWatchForm extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const Text(
-                        "RBS :  ",
+                      Text(
+                         Applocalizations.of(context)!.translatetext("RBS :  "),
                         style: CustomTextStyles.lohit500style20,
                       ),
                       Container(
@@ -136,8 +137,8 @@ class CustomMyWatchForm extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      const Text(
-                        "HbA1c :  ",
+                      Text(
+                         Applocalizations.of(context)!.translatetext("HbA1c :  "),
                         style: CustomTextStyles.lohit500style20,
                       ),
                       Container(

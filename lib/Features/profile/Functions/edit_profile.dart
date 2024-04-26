@@ -1,4 +1,4 @@
-import 'package:diabestapp/Core/Utils/App-String.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 TextEditingController currentPasswordController = TextEditingController();
@@ -10,21 +10,21 @@ TextEditingController currentPasswordController = TextEditingController();
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title:const Text(AppStrings.changepassword),
+          title: Text(Applocalizations.of(context)!.translatetext("changepassword")),
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               buildPasswordField(
-                label: AppStrings.currentpassword,
+                label: Applocalizations.of(context)!.translatetext("currentpassword"),
                 controller: currentPasswordController,
               ),
               buildPasswordField(
-                label: AppStrings.newpassword,
+                label:Applocalizations.of(context)!.translatetext("newpassword"),
                 controller: newPasswordController,
               ),
               buildPasswordField(
-                label: AppStrings.confirmThePassword,
+                label: Applocalizations.of(context)!.translatetext("confirmThePassword"),
                 controller: confirmPasswordController,
               ),
             ],
@@ -36,13 +36,13 @@ TextEditingController currentPasswordController = TextEditingController();
                 // Handle change password logic
                 Navigator.pop(context); // Close the dialog
               },
-              child:const Text(AppStrings.changepassword,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
+              child:Text(Applocalizations.of(context)!.translatetext("changepassword"),style:const TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
             ),
             TextButton(
               onPressed: () {
                 Navigator.pop(context); // Close the dialog
               },
-              child:const Text(AppStrings.cancel,style: TextStyle(fontSize: 16),),
+              child: Text(Applocalizations.of(context)!.translatetext("cancel"),style:const TextStyle(fontSize: 16),),
             ),
           ],
         );

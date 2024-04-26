@@ -2,6 +2,9 @@ import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Features/doctors_patient/Presentation/widget/card_doctor_patient.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomPatientDoctorForm extends StatefulWidget {
@@ -32,9 +35,9 @@ class _CustomPatientDoctorFormState extends State<CustomPatientDoctorForm> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(Assets.imagesImageDoctor),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(AppStrings.doctor,
+           Padding(
+            padding:const EdgeInsets.all(8.0),
+            child: Text( Applocalizations.of(context)!.translatetext("doctor"),
                 style: CustomTextStyles.lohit500style22),
           ),
         ],
@@ -43,13 +46,13 @@ class _CustomPatientDoctorFormState extends State<CustomPatientDoctorForm> {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: TextField(
           decoration: InputDecoration(
-            hintText: 'Search', prefixIcon: Icon(Icons.search),
+            hintText:  Applocalizations.of(context)!.translatetext("Search"), prefixIcon:const Icon(Icons.search),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
               borderSide: const BorderSide(color: Colors.grey, width: 2.0),
             ),
             contentPadding: const EdgeInsets.symmetric(
-                vertical: 10, horizontal: 10), // تحديد المسافة الداخلية
+                vertical: 10, horizontal: 10), 
           ),
           onChanged: (value) {
             setState(() {
@@ -90,3 +93,4 @@ class _CustomPatientDoctorFormState extends State<CustomPatientDoctorForm> {
     ]);
   }
 }
+

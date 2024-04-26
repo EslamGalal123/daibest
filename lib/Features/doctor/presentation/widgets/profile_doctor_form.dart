@@ -2,6 +2,7 @@ import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn_profile.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/doctor/presentation/widgets/image_of_doctor.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDoctorForm extends StatelessWidget {
@@ -20,12 +21,12 @@ class ProfileDoctorForm extends StatelessWidget {
         Row(
           children: [
            Text(
-              "Name :",
+              Applocalizations.of(context)!.translatetext("Name  "),
               style: Theme.of(context).textTheme.bodyMedium,
             ),
              SizedBox(width: width*0.03,),
             Text(
-              AppStrings.eslamgalal,
+            Applocalizations.of(context)!.translatetext("eslamgalal"),
               style: Theme.of(context).textTheme.bodySmall,
             )
           ],
@@ -36,7 +37,7 @@ class ProfileDoctorForm extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Specialization :",
+              Applocalizations.of(context)!.translatetext("specialization"),
               style: Theme.of(context).textTheme.bodyMedium,
             ),
              SizedBox(width: width*0.03,),
@@ -52,7 +53,7 @@ class ProfileDoctorForm extends StatelessWidget {
         Row(
           children: [
            Text(
-              "Phone Number :",
+              Applocalizations.of(context)!.translatetext("phoneNumbe"),
               style: Theme.of(context).textTheme.bodyMedium,
             ),
              SizedBox(width: width*0.03,),
@@ -68,7 +69,7 @@ class ProfileDoctorForm extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Clinic Address :",
+              Applocalizations.of(context)!.translatetext("citystreetblocknumber"),
               style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(width: width*0.03,),
@@ -84,7 +85,7 @@ class ProfileDoctorForm extends StatelessWidget {
        Row(
           children: [
            Text(
-              "Link Of Whatsapp :",
+              Applocalizations.of(context)!.translatetext("Link Of WhatsApp"),
               style: Theme.of(context).textTheme.bodyMedium,
             
             ),
@@ -103,7 +104,7 @@ class ProfileDoctorForm extends StatelessWidget {
          Row(
           children: [
            Text(
-              "Link Of Facebook :",
+             Applocalizations.of(context)!.translatetext("Link Of Facebook"),
               style:Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(width: width*0.03,),
@@ -117,7 +118,7 @@ class ProfileDoctorForm extends StatelessWidget {
           ],
         ),
          SizedBox(height:height*0.09,),
-        CustomBtnProfile(text: AppStrings.editprofile,onPressed: () {
+        CustomBtnProfile(text:Applocalizations.of(context)!.translatetext("editprofile"),onPressed: () {
           customNavigate(context, "/EditProfileDoctor");
         },)
       ],

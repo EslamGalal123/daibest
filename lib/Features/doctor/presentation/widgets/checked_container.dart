@@ -1,5 +1,6 @@
 import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Utils/App-String.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CheckedContainer extends StatefulWidget {
@@ -27,12 +28,12 @@ return OutlinedButton(
   child: Container(
      alignment: Alignment.center,
         margin: const EdgeInsets.all(20),
-        width: width*0.24,
-        height:height*0.08,
+        width: width*0.28,
+        height:height*0.1,
     child: Column(
       children: [
         Image.asset(image,width: width*0.09,),
-        Text(title,style: TextStyle(color: (selected==index)? Colors.white :Colors.black,fontSize: 17,fontWeight: FontWeight.w400),)
+        Text(title,style: TextStyle(color: (selected==index)? Colors.white :Colors.black,fontSize: 17,fontWeight: FontWeight.w500),)
       ],
     ),
   ));
@@ -42,13 +43,13 @@ return OutlinedButton(
     return SingleChildScrollView(scrollDirection: Axis.horizontal,
     child:Row(
       children: [
-        customRadio(Assets.imagesImageInternist, AppStrings.internist, 1),
+        customRadio(Assets.imagesImageInternist, Applocalizations.of(context)!.translatetext("internist"), 1),
        const SizedBox(width: 5,),
-         customRadio(Assets.imagesImageCardiologist, AppStrings.cardiologist, 2),
+         customRadio(Assets.imagesImageCardiologist, Applocalizations.of(context)!.translatetext("cardiologist"), 2),
          const SizedBox(width: 5,),
-          customRadio(Assets.imagesImageDermatolo, AppStrings.dermatology, 3),
+          customRadio(Assets.imagesImageDermatolo,Applocalizations.of(context)!.translatetext("dermatology"), 3),
           const SizedBox(width: 5,),
-           customRadio(Assets.imagesHepatologist, AppStrings.hepatologist, 4),
+           customRadio(Assets.imagesHepatologist,Applocalizations.of(context)!.translatetext("hepatologist"), 4),
           const SizedBox(width: 5,),
       ],
     ));

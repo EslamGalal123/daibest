@@ -1,6 +1,7 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomInfoForPatient extends StatefulWidget {
@@ -23,8 +24,8 @@ class _CustomInfoForPatientState extends State<CustomInfoForPatient> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 const Text(
-                    AppStrings.weight,
+                 Text(
+                    Applocalizations.of(context)!.translatetext("weight"),
                     style: CustomTextStyles.lohit500style20),
                   buildProfileField(
                     label: '',
@@ -39,8 +40,8 @@ class _CustomInfoForPatientState extends State<CustomInfoForPatient> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                const  Text(
-                    AppStrings.height,
+                  Text(
+                    Applocalizations.of(context)!.translatetext("height"),
                     style: CustomTextStyles.lohit500style20,
                         
                   ),
@@ -61,8 +62,8 @@ class _CustomInfoForPatientState extends State<CustomInfoForPatient> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 const  Text(
-                    AppStrings.maritalStatus,
+                   Text(
+                    Applocalizations.of(context)!.translatetext("maritalStatus"),
                     style:CustomTextStyles.lohit500style20,
                         
                   ),

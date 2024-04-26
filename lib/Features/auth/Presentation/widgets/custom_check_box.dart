@@ -2,6 +2,7 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 
@@ -31,7 +32,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
               });
             }
             ),
-            Text(AppStrings.rememberme,style: CustomTextStyles.lohit400style18,),
+            Text(Applocalizations.of(context)!.translatetext("Remember me"),style: CustomTextStyles.lohit400style18,),
             
       ],
     );

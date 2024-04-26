@@ -1,6 +1,7 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Features/profile/Presentation/widget/custom_edit_profile.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class EditProfileView extends StatelessWidget {
@@ -9,7 +10,7 @@ class EditProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:const Text(AppStrings.editprofile,style: CustomTextStyles.lohit500style22,),
+      appBar: AppBar(title: Text(Applocalizations.of(context)!.translatetext("editprofile"),style: CustomTextStyles.lohit500style22,),
       elevation: 0,),
       body: SafeArea(
         child: Padding(

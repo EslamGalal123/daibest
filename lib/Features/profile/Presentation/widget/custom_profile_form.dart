@@ -1,5 +1,6 @@
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomProfileForm extends StatelessWidget {
@@ -13,22 +14,22 @@ class CustomProfileForm extends StatelessWidget {
         children: [
          
            
-              Text("Weight: 85",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
+              Text("${Applocalizations.of(context)!.translatetext("weight")}"  "${"   85"}",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
               const SizedBox(height: 15,),
-               Text("Height: 185",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
+               Text("${Applocalizations.of(context)!.translatetext("height")}"  "${"   185"}",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
            
          
          const SizedBox(height: 15,),
-               Text("Gender: Male",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
+               Text("${Applocalizations.of(context)!.translatetext("gender")}"  "${"    male"}",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
               const SizedBox(height: 15,),
-             Text("Status: Single",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
+             Text("${Applocalizations.of(context)!.translatetext("maritalStatus")}"  "${"    single"}",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
            const SizedBox(height: 15,),
           
              
                  
-                  Text("Age: 22",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
+                  Text("${Applocalizations.of(context)!.translatetext("age")}"  "${"   22"}",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
                   const SizedBox(height: 15,),
-                  Text("Blood Suger Level: Type1",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
+                  Text("${Applocalizations.of(context)!.translatetext("Blood Suger Type :      ")}"  "${"   type1"}",style: CustomTextStyles.lohit400style20.copyWith(color: AppColors.black1),),
                
                
             ],

@@ -1,5 +1,6 @@
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Features/my_watch/presentation/widgets/chart_rate.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomHearttRate extends StatelessWidget {
@@ -21,12 +22,12 @@ class CustomHearttRate extends StatelessWidget {
             // ),  
               const   SizedBox(height: 10,),
             
-            const    Text("Pules-Rate",style: CustomTextStyles.lohit500style22,),
+               Text( Applocalizations.of(context)!.translatetext("Pules-Rate"),style: CustomTextStyles.lohit500style22,),
             const   SizedBox(height: 10,),
           const  LineChartWidget(),
                 Row(
                   children: [
-               const     Text("Heart Beats :  ",style: CustomTextStyles.lohit500style20,),
+                   Text( Applocalizations.of(context)!.translatetext("Heart Beats :  "),style: CustomTextStyles.lohit500style20,),
               //  SizedBox(width: ,)
 Container(
   width: 80,

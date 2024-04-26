@@ -4,6 +4,7 @@ import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/Home/presentatio/widgets/custom_list_tile.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomHome extends StatelessWidget {
@@ -25,10 +26,13 @@ class CustomHome extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    AppStrings.diabest,
-                    style: TextStyle( letterSpacing: 3,color: AppColors.black1, fontFamily: "poppins",fontSize: 44,fontWeight: FontWeight.bold)
-                  ),
+                  Text(AppStrings.diabest,
+                      style: TextStyle(
+                          letterSpacing: 3,
+                          color: AppColors.black1,
+                          fontFamily: "poppins",
+                          fontSize: 44,
+                          fontWeight: FontWeight.bold)),
                   Text(
                     AppStrings.enjayyourlifewithdiabest,
                     maxLines: 1,
@@ -44,40 +48,45 @@ class CustomHome extends StatelessWidget {
           ],
         ),
         CustomListTileInHome(
-            titlehome: AppStrings.organs,
-            subtitlehome: AppStrings.neew,
-            leadinghome: Assets.imagesorgans,
-            onpressed: () {
-              customNavigate(context, "/organsView");
-            },),
+          titlehome: Applocalizations.of(context)!.translatetext("organs"),
+          subtitlehome: Applocalizations.of(context)!.translatetext("neew"),
+          leadinghome: Assets.imagesorgans,
+          onpressed: () {
+            customNavigate(context, "/organsView");
+          },
+        ),
         CustomListTileInHome(
-            titlehome: AppStrings.reminderMedicins,
-            subtitlehome: AppStrings.neew,
-            leadinghome: Assets.imagesImagePill,
-            onpressed: () {
-              customNavigate(context, "/ReminderMedicinsView");
-            },),
+          titlehome: Applocalizations.of(context)!.translatetext("reminderMedicins"),
+          subtitlehome: Applocalizations.of(context)!.translatetext("neew"),
+          leadinghome: Assets.imagesImagePill,
+          onpressed: () {
+            customNavigate(context, "/ReminderMedicinsView");
+          },
+        ),
         CustomListTileInHome(
-            titlehome: AppStrings.eating,
-            subtitlehome: AppStrings.neew,
-            leadinghome: Assets.imagesImageMeal,
-            onpressed: () {
-              customNavigate(context, "/eatingview");
-            },),
+          titlehome: Applocalizations.of(context)!.translatetext("eating"),
+          subtitlehome: Applocalizations.of(context)!.translatetext("neew"),
+          leadinghome: Assets.imagesImageMeal,
+          onpressed: () {
+            customNavigate(context, "/eatingview");
+          },
+        ),
         CustomListTileInHome(
-            titlehome: AppStrings.sprts,
-            subtitlehome: AppStrings.neew,
-            leadinghome: Assets.imagesImageSports,
-            onpressed: () {
-              customNavigate(context, "/WorkoutPlanScreen");
-            },),
+          titlehome: Applocalizations.of(context)!.translatetext("sprts"),
+          subtitlehome: Applocalizations.of(context)!.translatetext("neew"),
+          leadinghome: Assets.imagesImageSports,
+          onpressed: () {
+            customNavigate(context, "/WorkoutPlanScreen");
+          },
+        ),
         CustomListTileInHome(
-            titlehome: AppStrings.pregnancy,
-            subtitlehome: AppStrings.neew,
-            leadinghome: Assets.imagespregnancy,
-            onpressed: () {
-              customNavigate(context, "/PregnancyView");
-            },)
+          titlehome: Applocalizations.of(context)!.translatetext("pregnancy"),
+          subtitlehome: Applocalizations.of(context)!.translatetext("neew"),
+          leadinghome: Assets.imagespregnancy,
+          onpressed: () {
+            customNavigate(context, "/PregnancyView");
+          },
+        )
       ],
     );
   }

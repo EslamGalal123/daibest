@@ -8,6 +8,7 @@ import 'package:diabestapp/Features/auth/Presentation/widgets/custom_check_box.d
 import 'package:diabestapp/Features/auth/Presentation/widgets/custom_social_icons.dart';
 import 'package:diabestapp/Features/auth/Presentation/widgets/forgot_password_text_widget.dart';
 import 'package:diabestapp/Features/auth/Presentation/widgets/have_an_account_widget.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -26,8 +27,8 @@ TextEditingController password=  TextEditingController();
           Assets.imagesLogo,
           height: height*0.4,
         ),
-        const Text(
-          AppStrings.logintoyouraccount,
+         Text(
+          Applocalizations.of(context)!.translatetext("logintoyouraccount"),
           style: CustomTextStyles.lohit500style24,
         ),
          SizedBox(
@@ -35,13 +36,13 @@ TextEditingController password=  TextEditingController();
         ),
         CustomTextFormField(
           mycontroller: emailAddress,
-          labelText: AppStrings.emailAddress,
+          labelText:  Applocalizations.of(context)!.translatetext("emailAddress"),
           prefixIcon: const Icon(Icons.email),
           onChanged: (email) {},
         ),
         CustomTextFormField(
           mycontroller: password,
-            labelText: AppStrings.password,
+            labelText:  Applocalizations.of(context)!.translatetext("password"),
             prefixIcon: const Icon(Icons.lock),
             onChanged: (password) {}),
         const CustomCheckBox(),
@@ -49,7 +50,7 @@ TextEditingController password=  TextEditingController();
           height: height*0.01,
         ),
         CustomBtn(
-          text: AppStrings.signIn,
+          text:  Applocalizations.of(context)!.translatetext("signIn"),
           onPressed: () {},
         ),
         SizedBox(
@@ -70,7 +71,7 @@ TextEditingController password=  TextEditingController();
          SizedBox(
           height: height*0.01,
         ),
-       HaveAnAccountWidget(text1: AppStrings.donthaveanaccount, text2: AppStrings.signUp,
+       HaveAnAccountWidget(text1:  Applocalizations.of(context)!.translatetext("donthaveanaccount"), text2:  Applocalizations.of(context)!.translatetext("signUp"),
      onTap: () {
        customNavigate(context, "/signUp");
      },)

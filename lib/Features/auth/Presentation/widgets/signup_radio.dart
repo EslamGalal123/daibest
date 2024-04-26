@@ -1,6 +1,9 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class SignUpRadio extends StatefulWidget {
@@ -22,7 +25,7 @@ class _SignUpRadioState extends State<SignUpRadio> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Radio<String>(
-                value: AppStrings.patient,
+                value:AppStrings.patient,
                 groupValue: selectedOption,
                 onChanged: (String? value) {
                   setState(() {
@@ -30,12 +33,12 @@ class _SignUpRadioState extends State<SignUpRadio> {
                   });
                 }),
             Text(
-              AppStrings.patient,
+             Applocalizations.of(context)!.translatetext("patient"),
               style: Theme.of(context).textTheme.titleSmall,
             ),
           SizedBox(width: width*0.1,),
             Radio<String>(
-                value: AppStrings.doctor,
+                value:AppStrings.doctor,
                 groupValue: selectedOption,
                 onChanged: (String? value) {
                   setState(() {
@@ -43,14 +46,14 @@ class _SignUpRadioState extends State<SignUpRadio> {
                   });
                 }),
          Text(
-              AppStrings.doctor,
+            Applocalizations.of(context)!.translatetext("doctor"),
               style:Theme.of(context).textTheme.titleSmall ,
             )
           ],
         ),
         SizedBox(height: height * 0.01),
       CustomBtn(
-        text: AppStrings.signUp,
+        text: Applocalizations.of(context)!.translatetext("signUp"),
        onPressed: () {
             if (selectedOption == AppStrings.patient) {
               

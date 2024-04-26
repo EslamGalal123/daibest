@@ -3,6 +3,7 @@ import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordTextWidget extends StatelessWidget {
@@ -17,7 +18,7 @@ class ForgotPasswordTextWidget extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: Text(
-          AppStrings.forgotPassword,
+         Applocalizations.of(context)!.translatetext("Forget Password"),
           style: CustomTextStyles.lohit500style14.copyWith(color: AppColors.deebGrey),
         ),
       ),

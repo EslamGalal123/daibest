@@ -5,6 +5,7 @@ import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/auth/Presentation/widgets/custom_signup_form.dart';
 import 'package:diabestapp/Features/auth/Presentation/widgets/have_an_account_widget.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class SignUpView extends StatelessWidget {
@@ -26,8 +27,9 @@ class SignUpView extends StatelessWidget {
                SliverToBoxAdapter(child: SizedBox(height: height*0.01)),
               SliverToBoxAdapter(
                 child: HaveAnAccountWidget(
-                  text1: AppStrings.alreadyHaveAnAccount,
-                  text2: AppStrings.signIn,
+                  text1:Applocalizations.of(context)!.translatetext("alreadyHaveAnAccount"),
+
+                  text2:Applocalizations.of(context)!.translatetext("signIn"),
                   onTap: () {
                     customNavigate(context, "/signIn");
                   },

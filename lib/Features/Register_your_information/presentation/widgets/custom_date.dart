@@ -1,6 +1,6 @@
-import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class DateButton extends StatefulWidget {
@@ -30,13 +30,13 @@ class _DateButtonState extends State<DateButton> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const  Text(
-                      AppStrings.date,
+                 Text(
+                      Applocalizations.of(context)!.translatetext("date"),
                       style:CustomTextStyles.lohit500style20,
                           
                     ),
                 Container(
-                  width: 150,
+                  width: 140,
                   height: 50,
                   decoration: BoxDecoration(
                     border: Border.all(color: AppColors.grey),

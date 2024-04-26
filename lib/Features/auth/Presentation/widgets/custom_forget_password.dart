@@ -4,6 +4,7 @@ import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn.dart';
 import 'package:diabestapp/Core/Widgets/custom_text_field.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -21,7 +22,7 @@ TextEditingController emailAddress =  TextEditingController();
         SizedBox(height: height*0.01),
         Expanded(
           child: Text(
-            'Reset your password with email',
+            Applocalizations.of(context)!.translatetext("Reset your password with email"),
             textAlign: TextAlign.center,
             style: CustomTextStyles.lohit500style18,
           ),
@@ -49,7 +50,7 @@ TextEditingController emailAddress =  TextEditingController();
           child: Align(
             alignment: Alignment.bottomCenter,
             child: CustomBtn(
-              text: 'Continue',
+              text:  Applocalizations.of(context)!.translatetext("Continue"),
               onPressed: () {
                 customNavigate(context, "/MyVerificationPage");
               },

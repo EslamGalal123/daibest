@@ -1,4 +1,3 @@
-import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn.dart';
 import 'package:diabestapp/Core/functions/Navigation.dart';
@@ -6,6 +5,7 @@ import 'package:diabestapp/Features/Register_your_information/presentation/widge
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_form_info_page1.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_height-weight.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_marital_status.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class RegisterYourInformation extends StatelessWidget {
@@ -16,7 +16,7 @@ class RegisterYourInformation extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title:  Text(
-          AppStrings.registerYourInformation,
+          Applocalizations.of(context)!.translatetext("registerYourInformation"),
           style:TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w400,
@@ -48,9 +48,9 @@ class RegisterYourInformation extends StatelessWidget {
                   const SliverToBoxAdapter(child: SizedBox(height: 25)),
                   SliverToBoxAdapter(
                       child: CustomBtn(
-                    text: AppStrings.next,
+                    text: Applocalizations.of(context)!.translatetext("next"),
                     onPressed: () {
-                      customNavigate(context, "/registerYourInformationpage3");
+                      customNavigate(context, "/CustomBtnNavigation");
                     },
                   )),
                                     const SliverToBoxAdapter(child: SizedBox(height: 10)),

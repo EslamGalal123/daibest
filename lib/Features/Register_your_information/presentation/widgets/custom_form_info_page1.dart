@@ -3,6 +3,7 @@ import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/information_adresses.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomFormInfoPage1 extends StatefulWidget {
@@ -29,12 +30,12 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        InformationAdresses(text: AppStrings.gender),
+        InformationAdresses(text: Applocalizations.of(context)!.translatetext("gender")),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Radio(
-                value: 'male',
+                value:'male',
                 groupValue: gender,
                 onChanged: (val) {
                   setState(() {
@@ -62,7 +63,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
         ),
      
 
-        InformationAdresses(text: AppStrings.doyousufferfromdiabeticcoma),
+        InformationAdresses(text:Applocalizations.of(context)!.translatetext("doyousufferfromdiabeticcoma")),
         const SizedBox(
           height: 10,
         ),
@@ -79,7 +80,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -94,12 +95,12 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
         ),
-        InformationAdresses(text: AppStrings.doyousmoke),
+        InformationAdresses(text: Applocalizations.of(context)!.translatetext("doyousmoke")),
         const SizedBox(
           height: 10,
         ),
@@ -116,7 +117,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -131,12 +132,12 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
         ),
-        InformationAdresses(text: AppStrings.doesanyoneinyourfamilyhavediabetes),
+        InformationAdresses(text:Applocalizations.of(context)!.translatetext("doesanyoneinyourfamilyhavediabetes")),
         const SizedBox(
           height: 10,
         ),
@@ -153,7 +154,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -168,12 +169,12 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
         ),
- InformationAdresses(text: AppStrings.doyouusebloodpresuremedications),
+ InformationAdresses(text: Applocalizations.of(context)!.translatetext("doyouusebloodpresuremedications")),
         const SizedBox(
           height: 7,
         ),
@@ -191,7 +192,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                AppStrings.yes,
+               Applocalizations.of(context)!.translatetext("yes"),
                 style: CustomTextStyles.lohit400style18,
               ),
             ),
@@ -209,13 +210,13 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                AppStrings.no,
+                Applocalizations.of(context)!.translatetext("no"),
                 style: CustomTextStyles.lohit400style18,
               ),
             ),
           ],
         ),
-        InformationAdresses(text: AppStrings.doyoutakemedicationforatheroscleriosisoranyheartdisease),
+        InformationAdresses(text: Applocalizations.of(context)!.translatetext("doyoutakemedicationforatheroscleriosisoranyheartdisease")),
         const SizedBox(
           height: 7,
         ),
@@ -232,7 +233,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -247,12 +248,12 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
         ),
-        InformationAdresses(text: AppStrings.doyoudrinkalcholetc),
+        InformationAdresses(text: Applocalizations.of(context)!.translatetext("doyoudrinkalcholetc")),
         const SizedBox(
           height: 7,
         ),
@@ -269,7 +270,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -284,12 +285,12 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
         ),
-        InformationAdresses(text: AppStrings.doyouhavemedicationforanyhepaticdisease),
+        InformationAdresses(text: Applocalizations.of(context)!.translatetext("doyouhavemedicationforanyhepaticdisease")),
         const SizedBox(
           height: 7,
         ),
@@ -306,7 +307,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -321,7 +322,7 @@ class _CustomFormInfoPage1State extends State<CustomFormInfoPage1> {
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
@@ -340,10 +341,10 @@ children: [
           children: [
             // Icon(Icons.woman_2_outlined,size: 40,color: AppColors.black2,),
             Image.asset(Assets.imagesImageOpenmojiWoman),
-            Text(AppStrings.forfemale,style: CustomTextStyles.lohit500style24.copyWith(color: AppColors.black2),)
+            Text(Applocalizations.of(context)!.translatetext("forfemale"),style: CustomTextStyles.lohit500style24.copyWith(color: AppColors.black2),)
           ],
         ),
-        InformationAdresses(text: AppStrings.doyouhaveoralcontraceptives),
+        InformationAdresses(text:Applocalizations.of(context)!.translatetext("doyouhaveoralcontraceptives")),
         const SizedBox(
           height: 7,
         ),
@@ -360,7 +361,7 @@ children: [
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -375,12 +376,12 @@ children: [
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
         ),
-        InformationAdresses(text: AppStrings.areyoupregnant),
+        InformationAdresses(text: Applocalizations.of(context)!.translatetext("areyoupregnant")),
         const SizedBox(
           height: 7,
         ),
@@ -397,7 +398,7 @@ children: [
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -412,12 +413,12 @@ children: [
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],
         ),
-        InformationAdresses(text: AppStrings.areyoubreastfeeding),
+        InformationAdresses(text: Applocalizations.of(context)!.translatetext("areyoubreastfeeding")),
         const SizedBox(
           height: 7,
         ),
@@ -434,7 +435,7 @@ children: [
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.yes,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("yes"),style: CustomTextStyles.lohit400style18,),
             ),
             const SizedBox(
               width: 80,
@@ -449,7 +450,7 @@ children: [
                 }),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child:   Text(AppStrings.no,style: CustomTextStyles.lohit400style18,),
+              child:   Text(Applocalizations.of(context)!.translatetext("no"),style: CustomTextStyles.lohit400style18,),
             ),
             
           ],

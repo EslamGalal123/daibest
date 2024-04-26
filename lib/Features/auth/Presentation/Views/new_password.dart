@@ -1,6 +1,7 @@
 import 'package:diabestapp/Core/Utils/App-Assets.dart';
 import 'package:diabestapp/Core/Widgets/custom_btn.dart';
 import 'package:diabestapp/Core/Widgets/custom_text_field.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class CreateNewPassword extends StatelessWidget {
@@ -26,11 +27,11 @@ TextEditingController confirmThePassword = TextEditingController();
           children: [
             SizedBox(height: height*0.01),
             Text(
-              'Create New Password',
+              Applocalizations.of(context)!.translatetext("Create New Password"),
               style:  Theme.of(context).textTheme.titleSmall,
             ),
             SizedBox(height: height*0.01),
-          const  Text('Create your new password'),
+            Text(Applocalizations.of(context)!.translatetext("Create your new password")),
             SizedBox(height: height*0.01),
             ClipOval(
               child: SizedBox(
@@ -55,8 +56,8 @@ TextEditingController confirmThePassword = TextEditingController();
             //   ),
             //   obscureText: true,
             // ),
-            CustomTextFormField(labelText: "New Password", mycontroller: newpassword),
-CustomTextFormField(labelText: "Confirm Password", mycontroller: confirmThePassword),
+            CustomTextFormField(labelText: Applocalizations.of(context)!.translatetext("New Password"), mycontroller: newpassword),
+CustomTextFormField(labelText: Applocalizations.of(context)!.translatetext("Confirm Password"), mycontroller: confirmThePassword),
             SizedBox(height: height*0.01),
             Row(
               children: [
@@ -66,11 +67,11 @@ CustomTextFormField(labelText: "Confirm Password", mycontroller: confirmThePassw
                     // Handle checkbox state
                   },
                 ),
-             const   Text('Remember me'),
+               Text(Applocalizations.of(context)!.translatetext("Remember me")),
               ],
             ),
             SizedBox(height: height*0.04),
-         CustomBtn(text: "Continue",onPressed: () {
+         CustomBtn(text: Applocalizations.of(context)!.translatetext("Continue"),onPressed: () {
            
          },)
           ],
@@ -97,7 +98,7 @@ CustomTextFormField(labelText: "Confirm Password", mycontroller: confirmThePassw
                 Navigator.of(context).pop();
               },
               style: ElevatedButton.styleFrom(primary:const Color(0xFF246BFE)),
-              child: const Text('Close',style: TextStyle(color: Colors.white),),
+              child: Text(Applocalizations.of(context)!.translatetext("Close"),style: TextStyle(color: Colors.white),),
             ),
           ],
         );

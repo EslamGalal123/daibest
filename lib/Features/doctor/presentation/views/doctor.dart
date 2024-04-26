@@ -7,6 +7,7 @@ import 'package:diabestapp/Core/functions/Navigation.dart';
 import 'package:diabestapp/Features/doctor/presentation/widgets/checked_container.dart';
 import 'package:diabestapp/Features/doctor/presentation/widgets/doctor_adresses.dart';
 import 'package:diabestapp/Features/doctor/presentation/widgets/time_work.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -35,7 +36,7 @@ TextEditingController facebook =  TextEditingController();
                 )),
                 SliverToBoxAdapter(
                     child: Text(
-                  AppStrings.registernow,
+                  Applocalizations.of(context)!.translatetext("registernow"),
                   style: CustomTextStyles.lohit500style24.copyWith(
                       fontWeight: FontWeight.w700, color: AppColors.black2),
                 )),
@@ -45,7 +46,7 @@ TextEditingController facebook =  TextEditingController();
                 )),
                 SliverToBoxAdapter(
                     child: DoctorAdress(
-                  text: AppStrings.specialization,
+                  text: Applocalizations.of(context)!.translatetext("specialization"),
                 )),
                  SliverToBoxAdapter(
                     child: SizedBox(
@@ -58,7 +59,7 @@ TextEditingController facebook =  TextEditingController();
                 )),
                 SliverToBoxAdapter(
                     child: DoctorAdress(
-                  text: AppStrings.clinicaddress,
+                  text: Applocalizations.of(context)!.translatetext("clinicaddress"),
                 )),
                  SliverToBoxAdapter(
                     child: SizedBox(
@@ -67,25 +68,25 @@ TextEditingController facebook =  TextEditingController();
                  SliverToBoxAdapter(
                     child: CustomTextFormField(
                       mycontroller: citystreetblocknumber,
-                  labelText: AppStrings.citystreetblocknumber,
+                  labelText: Applocalizations.of(context)!.translatetext("citystreetblocknumber"),
                   prefixIcon:const Icon(Icons.location_city_rounded),
                 )),
                 SliverToBoxAdapter(
                     child: CustomTextFormField(
                       mycontroller: phoneNumbe,
-                  labelText: AppStrings.phoneNumbe,
+                  labelText: Applocalizations.of(context)!.translatetext("phoneNumbe"),
                   prefixIcon:const Icon(Icons.phone),
                 )),
                 SliverToBoxAdapter(
                     child: CustomTextFormField(
                       mycontroller: facebook,
-                  labelText: "Link Of Facebook",
+                  labelText: Applocalizations.of(context)!.translatetext("Link Of Facebook"),
                   prefixIcon:const Icon(Icons.facebook),
                 )),
                 SliverToBoxAdapter(
                     child: CustomTextFormField(
                       mycontroller: whatsApp,
-                  labelText: "Link Of WhatsApp",
+                  labelText: Applocalizations.of(context)!.translatetext("Link Of WhatsApp"),
                   prefixIcon:const Icon(Icons.chat),
                 )),
                  SliverToBoxAdapter(
@@ -97,7 +98,7 @@ TextEditingController facebook =  TextEditingController();
                   children: [
                     const Icon(Icons.punch_clock),
                     DoctorAdress(
-                      text: AppStrings.timework,
+                      text: Applocalizations.of(context)!.translatetext("timework"),
                     )
                   ],
                 )),
@@ -108,11 +109,11 @@ TextEditingController facebook =  TextEditingController();
                 SliverToBoxAdapter(
                   child: Row(
                     children: [
-                      TimeWork(date: AppStrings.start),
+                      TimeWork(date: Applocalizations.of(context)!.translatetext("start")),
                        SizedBox(
                         width: width*0.2,
                       ),
-                      TimeWork(date: AppStrings.end),
+                      TimeWork(date: Applocalizations.of(context)!.translatetext("end")),
                     ],
                   ),
                 ),
@@ -122,7 +123,7 @@ TextEditingController facebook =  TextEditingController();
                 )),
                 SliverToBoxAdapter(
                     child: CustomBtn(
-                  text: AppStrings.saveprofile,
+                  text: Applocalizations.of(context)!.translatetext("saveprofile"),
                   onPressed: () {
                     customNavigate(context, "/ProfileDoctorView");
                   },

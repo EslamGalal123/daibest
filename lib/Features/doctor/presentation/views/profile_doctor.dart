@@ -1,5 +1,6 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Features/doctor/presentation/widgets/profile_doctor_form.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDoctorView extends StatelessWidget {
@@ -12,7 +13,7 @@ class ProfileDoctorView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          AppStrings.doctor,
+          Applocalizations.of(context)!.translatetext("doctor"),
           style:Theme.of(context).textTheme.titleMedium,
         ),
         elevation: 0,

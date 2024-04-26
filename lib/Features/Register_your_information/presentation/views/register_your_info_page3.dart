@@ -1,6 +1,7 @@
 import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
 import 'package:diabestapp/Features/Register_your_information/presentation/widgets/custom_form_info_page3.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class RegisterYourInformationPage3 extends StatelessWidget {
@@ -11,7 +12,7 @@ class RegisterYourInformationPage3 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            AppStrings.registerYourInformation,
+           Applocalizations.of(context)!.translatetext("registerYourInformation"),
             style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w400,

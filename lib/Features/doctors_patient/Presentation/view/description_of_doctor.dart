@@ -1,6 +1,6 @@
-import 'package:diabestapp/Core/Utils/App-String.dart';
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Features/doctors_patient/Presentation/widget/description_form.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionsOfDoctor extends StatelessWidget {
@@ -10,8 +10,8 @@ class DescriptionsOfDoctor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          AppStrings.doctor,
+        title:  Text(
+          Applocalizations.of(context)!.translatetext("doctor"),
           style: CustomTextStyles.lohit500style24,
         ),
         elevation: 0,

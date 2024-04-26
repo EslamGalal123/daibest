@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:diabestapp/Core/functions/Navigation.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 class MyVerificationPage extends StatefulWidget {
@@ -37,7 +38,7 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text('OTP Verification'),
+        title: Text(Applocalizations.of(context)!.translatetext("OTP Verification")),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -46,12 +47,12 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
            const SizedBox(height: 40,),
-          const  Text(
-              'OTP Code Verification',
+           Text(
+              Applocalizations.of(context)!.translatetext("OTP Code Verification"),
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
            const SizedBox(height: 8.0),
-            Text('Enter code sent to $emailAddress'),
+            Text('${Applocalizations.of(context)!.translatetext("Enter code sent to")} $emailAddress'),
            const SizedBox(height: 16.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +77,7 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
               ],
             ),
            const SizedBox(height: 16.0),
-            Text('Reset code in $countdown s'),
+            Text('${Applocalizations.of(context)!.translatetext("Reset code in")}$countdown s'),
            const SizedBox(height: 16.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(primary:const Color(0xFF246BFE),  padding: const EdgeInsets.symmetric(horizontal: 40)),
@@ -84,7 +85,7 @@ class _MyVerificationPageState extends State<MyVerificationPage> {
                 _onContinuePressed();
 customNavigate(context, "/CreateNewPassword");
               },
-              child:const Text('Continue',style: TextStyle(color: Colors.white,fontSize: 16),),
+              child: Text(Applocalizations.of(context)!.translatetext("Continue"),style: TextStyle(color: Colors.white,fontSize: 16),),
             ),
            const SizedBox(height: 16.0),
             Expanded(

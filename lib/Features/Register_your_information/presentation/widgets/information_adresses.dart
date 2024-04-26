@@ -10,6 +10,7 @@ String? text;
               text!,
               style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.left,
+              maxLines: 1
             );
   }
 }

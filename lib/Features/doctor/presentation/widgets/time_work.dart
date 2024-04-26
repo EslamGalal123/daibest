@@ -1,5 +1,6 @@
 import 'package:diabestapp/Core/Utils/App-TextStyles.dart';
 import 'package:diabestapp/Core/Utils/App-colors.dart';
+import 'package:diabestapp/Localizations/applocalizations.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -49,7 +50,7 @@ class _TimeWorkState extends State<TimeWork> {
 
         DropdownButton<String>(
           value: selectedStartTime,
-          hint:const Text(' Time'),
+          hint: Text(Applocalizations.of(context)!.translatetext(" Time")),
           onChanged: (String? newValue) {
             setState(() {
               selectedStartTime = newValue;
@@ -64,7 +65,7 @@ class _TimeWorkState extends State<TimeWork> {
           style: TextStyle(color: AppColors.black2, fontSize: 20.0),
           underline: Container(
             height: 1,
-            color: AppColors.black2, // لون الحدود هنا
+            color: AppColors.black2, 
           ),
         ),
       ],
